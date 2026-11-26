@@ -1,0 +1,131 @@
+{
+  "generated_at_utc": "2026-10-25T22:56:59.501068+00:00",
+  "input_file": "data/raw/LSWMD.pkl",
+  "input_bytes": 2095505977,
+  "record_count": 811457,
+  "columns": [
+    "waferMap",
+    "dieSize",
+    "lotName",
+    "waferIndex",
+    "trianTestLabel",
+    "failureType"
+  ],
+  "recognized_labeled_count": 172950,
+  "unlabeled_count": 638507,
+  "unexpected_label_count": 0,
+  "unexpected_labels": {},
+  "class_counts": {
+    "Center": 4294,
+    "Donut": 555,
+    "Edge-Loc": 5189,
+    "Edge-Ring": 9680,
+    "Loc": 3593,
+    "Random": 866,
+    "Scratch": 1193,
+    "Near-full": 149,
+    "None": 147431
+  },
+  "class_order": [
+    "Center",
+    "Donut",
+    "Edge-Loc",
+    "Edge-Ring",
+    "Loc",
+    "Random",
+    "Scratch",
+    "Near-full",
+    "None"
+  ],
+  "unique_lots_all_records": 46293,
+  "unique_lots_recognized_labeled": 10762,
+  "missing_lot_records": 0,
+  "unique_lots_per_class": {
+    "Center": 1648,
+    "Donut": 233,
+    "Edge-Loc": 3211,
+    "Edge-Ring": 1075,
+    "Loc": 2472,
+    "Random": 449,
+    "Scratch": 1059,
+    "Near-full": 137,
+    "None": 6591
+  },
+  "unique_map_shapes": 632,
+  "map_height_min_max": [
+    6,
+    300
+  ],
+  "map_width_min_max": [
+    3,
+    205
+  ],
+  "pixel_value_counts": {
+    "0": 422404108,
+    "1": 1393453681,
+    "2": 100437508
+  },
+  "original_train_test_label_column": "trianTestLabel",
+  "original_train_test_label_counts": {
+    "Training": 54355,
+    "<missing>": 638507,
+    "Test": 118595
+  },
+  "map_audit_counts": {
+    "zero_failing_die_map": 58328
+  },
+  "map_audit_example_row_positions": {
+    "zero_failing_die_map": [
+      7952,
+      7954,
+      7956,
+      7957,
+      8087,
+      8089,
+      8091,
+      8094,
+      8095,
+      8106,
+      8111,
+      8133,
+      8147,
+      8161,
+      8163,
+      8164,
+      8165,
+      8167,
+      8168,
+      8180
+    ]
+  },
+  "exact_duplicate_check": {
+    "performed": true,
+    "scope": "Recognized labeled maps only; 2D, values in {0,1,2}, and at least one valid die. Original shape and values, before resizing.",
+    "maps_checked": 172950,
+    "unique_hashes": 169698,
+    "duplicate_groups": 3250,
+    "maps_in_duplicate_groups": 6502,
+    "redundant_maps_beyond_first": 3252,
+    "conflicting_label_groups": 14,
+    "hash_method": "BLAKE2b-128 over little-endian uint32 shape followed by row-major uint8 values; hash equality is used for grouping."
+  },
+  "example_selection": {
+    "seed": 77,
+    "method": "Uniform reservoir sample per class with independent NumPy random streams; samples are illustrative real observations, not selected for typicality or prediction outcome.",
+    "eligibility": "2D nonempty map; all values in {0,1,2}; at least one valid die; recognized class label."
+  },
+  "notes": [
+    "The original lowercase label 'none' is displayed as 'None'. Missing labels are a separate category.",
+    "None denotes no labeled systematic failure pattern, not necessarily zero failing dies.",
+    "zero_failing_die_map is descriptive, not automatically an invalid record.",
+    "Original trainTestLabel values are reported for auditing only; no new train/validation/test split has been made.",
+    "No resizing, augmentation, model training, attacks, or predictions were performed."
+  ],
+  "runtime_seconds_before_figures": 209.767,
+  "versions": {
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "matplotlib": "3.10.7"
+  },
+  "record_origin": "Saved dataset audit; path labels normalized for public distribution."
+}

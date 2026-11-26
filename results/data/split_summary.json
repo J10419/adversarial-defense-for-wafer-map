@@ -1,0 +1,150 @@
+{
+  "status": "complete",
+  "created_at_utc": "2026-10-25T23:05:31.954138+00:00",
+  "seed": 77,
+  "target_ratios": {
+    "train": 0.7,
+    "val": 0.15,
+    "test": 0.15
+  },
+  "method": "StratifiedGroupKFold(n_splits=20, shuffle=True, random_state=77)",
+  "fold_assignment": {
+    "train": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "val": [
+      14,
+      15,
+      16
+    ],
+    "test": [
+      17,
+      18,
+      19
+    ]
+  },
+  "selection_rule": "Fixed fold assignment specified before any model training; no search or choice based on model performance.",
+  "total_cleaned_maps": 169680,
+  "total_lots": 10762,
+  "splits": {
+    "train": {
+      "maps": 118965,
+      "fraction": 0.7011138613861386,
+      "lots": 7539,
+      "class_counts": {
+        "Center": 3101,
+        "Donut": 368,
+        "Edge-Loc": 3606,
+        "Edge-Ring": 6863,
+        "Loc": 2532,
+        "Random": 620,
+        "Scratch": 805,
+        "Near-full": 90,
+        "None": 100980
+      }
+    },
+    "val": {
+      "maps": 25230,
+      "fraction": 0.1486916548797737,
+      "lots": 1605,
+      "class_counts": {
+        "Center": 602,
+        "Donut": 87,
+        "Edge-Loc": 771,
+        "Edge-Ring": 1385,
+        "Loc": 504,
+        "Random": 102,
+        "Scratch": 188,
+        "Near-full": 30,
+        "None": 21561
+      }
+    },
+    "test": {
+      "maps": 25485,
+      "fraction": 0.1501944837340877,
+      "lots": 1618,
+      "class_counts": {
+        "Center": 583,
+        "Donut": 100,
+        "Edge-Loc": 774,
+        "Edge-Ring": 1420,
+        "Loc": 536,
+        "Random": 130,
+        "Scratch": 189,
+        "Near-full": 21,
+        "None": 21732
+      }
+    }
+  },
+  "cross_split_intersections": {
+    "train_vs_val": {
+      "lot": 0,
+      "raw_hash": 0,
+      "resized_hash": 0
+    },
+    "train_vs_test": {
+      "lot": 0,
+      "raw_hash": 0,
+      "resized_hash": 0
+    },
+    "val_vs_test": {
+      "lot": 0,
+      "raw_hash": 0,
+      "resized_hash": 0
+    }
+  },
+  "assertions_passed": {
+    "every_record_assigned_once": true,
+    "nine_classes_present_in_each_split": true,
+    "lot_disjoint": true,
+    "original_map_disjoint": true,
+    "resized_map_disjoint": true,
+    "input_records_equal_retained_plus_excluded": true
+  },
+  "file_integrity": {
+    "data/raw/LSWMD.pkl": {
+      "bytes": 2095505977,
+      "sha256": "1d04fccb3dd3176b276878b926b20fead7e077c5751e4d353ea9741a5e7b5c65"
+    },
+    "data/processed/images.npy": {
+      "bytes": 695009408,
+      "sha256": "9264a2d0e3a95a95db179cc5c887bb237a7cd73247de9779a15990780e5b1ee3"
+    },
+    "data/processed/labels.npy": {
+      "bytes": 1357568,
+      "sha256": "7349a794f022449a515c0876b9c40175ef6a15ab967ad9e42ac76c6d8bf6c989"
+    },
+    "data/processed/splits.npz": {
+      "bytes": 259802,
+      "sha256": "93fcccac38c028367f3bf106030118be4f8f2637c0ddde5213a9c089dc3fb8b8"
+    },
+    "data/processed/metadata.csv": {
+      "bytes": 19948286,
+      "sha256": "2dc3f46be596e93be5b6ffc5ef7d1c09191e9e94c01e63ea1ef77a014ccf0682"
+    },
+    "data/processed/config.json": {
+      "bytes": 1160,
+      "sha256": "f9ae0d8915dcaff1ed24ba0dd9b230f18dd78d41273ef104a5b7fee545da7262"
+    }
+  },
+  "runtime_seconds": 169.57,
+  "notes": [
+    "Class weights must be computed from train labels only.",
+    "Use validation for checkpoint selection; freeze all choices before inspecting test metrics.",
+    "No oversampling, geometric augmentation, model fitting, or model-based split selection was performed."
+  ],
+  "record_origin": "Saved dataset audit; path labels normalized for public distribution."
+}

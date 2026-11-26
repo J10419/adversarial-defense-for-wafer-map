@@ -1,0 +1,83 @@
+{
+  "created_at_utc": "2026-10-26T00:57:08.241593+00:00",
+  "data_dir": "data/processed",
+  "data_sha256": {
+    "images.npy": "9264a2d0e3a95a95db179cc5c887bb237a7cd73247de9779a15990780e5b1ee3",
+    "labels.npy": "7349a794f022449a515c0876b9c40175ef6a15ab967ad9e42ac76c6d8bf6c989",
+    "splits.npz": "93fcccac38c028367f3bf106030118be4f8f2637c0ddde5213a9c089dc3fb8b8",
+    "metadata.csv": "2dc3f46be596e93be5b6ffc5ef7d1c09191e9e94c01e63ea1ef77a014ccf0682"
+  },
+  "class_names": [
+    "Center",
+    "Donut",
+    "Edge-Loc",
+    "Edge-Ring",
+    "Loc",
+    "Random",
+    "Scratch",
+    "Near-full",
+    "None"
+  ],
+  "seed": 77,
+  "training_mode": "noise",
+  "max_epochs": 10,
+  "early_stopping_patience": 5,
+  "selection_metric": "validation_macro_f1_fixed_nine_classes",
+  "selection_tie_rule": "Keep the earliest epoch on equal validation macro-F1.",
+  "batch_size": 64,
+  "eval_batch_size": 128,
+  "optimizer": "Adam",
+  "learning_rate": 0.001,
+  "weight_decay": 0.0,
+  "train_class_counts": [
+    3101,
+    368,
+    3606,
+    6863,
+    2532,
+    620,
+    805,
+    90,
+    100980
+  ],
+  "class_weights": [
+    0.5340194544801051,
+    1.550186864475655,
+    0.4952164935076155,
+    0.35896405495547357,
+    0.590984528070365,
+    1.1942963833826696,
+    1.0481176193086863,
+    3.1346330422196567,
+    0.09358155959977317
+  ],
+  "weight_rule": "inverse sqrt training class count, normalized to arithmetic mean 1",
+  "loss": "weighted cross entropy",
+  "noise_epsilon": 0.03137254901960784,
+  "noise_rule": "uniform[-epsilon,epsilon] on the clean wafer mask, clip to [0,1]",
+  "pgd_training": null,
+  "augmentation": "uniform masked input noise",
+  "input_encoding": "cached uint8 0/1/2 converted to float32 0/0.5/1",
+  "model": "3 x (Conv3x3 stride1 padding1, ReLU, MaxPool2x2): channels 32/64/128; GAP; Linear128to9",
+  "parameter_count": 93833,
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce GTX 1660 Ti",
+  "torch": "2.10.0+cu128",
+  "cuda_runtime": "12.8",
+  "numpy": "1.26.4",
+  "precision": "float32; no AMP or TF32",
+  "determinism": "fixed Python/NumPy/Torch seeds; cuDNN deterministic true, benchmark false",
+  "shuffle": "NumPy default_rng(seed).permutation(train indices), once per epoch",
+  "split_sizes": {
+    "train": 118965,
+    "val": 25230,
+    "test": 25485
+  },
+  "scope": "One independent seed/mode run; report aggregate only after the prescribed seed set is complete.",
+  "training_code_sha256": {
+    "train_baseline.py": "bfe0672976b5fbd71e78ab41d4163a237f44c46a6d195e534cbd5e7fc5c5fad7",
+    "training_defenses.py": "7446a7d2a7d7ba63f9416ac118a146ded1b9bbe22d34fff414b8e0699180f3fa",
+    "wafer_model.py": "29b73a162a4e4ec1dc646328b10596a800c5c69e643a29ccdf950ffca596a037"
+  },
+  "record_origin": "Saved original training run; public metadata normalized without retraining."
+}

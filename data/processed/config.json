@@ -1,0 +1,72 @@
+{
+  "classes": [
+    "Center",
+    "Donut",
+    "Edge-Loc",
+    "Edge-Ring",
+    "Loc",
+    "Random",
+    "Scratch",
+    "Near-full",
+    "None"
+  ],
+  "class_to_id": {
+    "Center": 0,
+    "Donut": 1,
+    "Edge-Loc": 2,
+    "Edge-Ring": 3,
+    "Loc": 4,
+    "Random": 5,
+    "Scratch": 6,
+    "Near-full": 7,
+    "None": 8
+  },
+  "image_shape": [
+    64,
+    64
+  ],
+  "image_dtype": "uint8",
+  "stored_pixel_values": [
+    0,
+    1,
+    2
+  ],
+  "model_input_encoding": "torch.float32(stored_uint8) / 2.0",
+  "model_input_values": [
+    0.0,
+    0.5,
+    1.0
+  ],
+  "wafer_mask": "stored_uint8 > 0; fixed from clean input",
+  "resize": "Pillow Image.Resampling.NEAREST to width=64,height=64; no geometric augmentation",
+  "seed": 77,
+  "split_method": "StratifiedGroupKFold(n_splits=20, shuffle=True, random_state=77)",
+  "folds": {
+    "train": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "val": [
+      14,
+      15,
+      16
+    ],
+    "test": [
+      17,
+      18,
+      19
+    ]
+  }
+}

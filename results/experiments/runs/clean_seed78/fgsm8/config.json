@@ -1,0 +1,9 @@
+{
+  "protocol_sha256": "c42e00a09b5a522e9c43fbbb22f31b4ca5b9f9eceb95aa7ddfa0e549b9f5baf2",
+  "method": "clean",
+  "seed": 78,
+  "condition": "fgsm8",
+  "checkpoint_sha256": "cbdc6d19b2ddfd1f4183f4116c00f9866586eff9aaafba0900f632118c1ca664",
+  "selected_indices_sha256": "41d9b3bcac4a852d25e6d8d48b13c4002671c07cf73c61752f92453c555410e8",
+  "n": 25485
+}

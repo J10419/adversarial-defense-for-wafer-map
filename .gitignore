@@ -1,0 +1,29 @@
+# Python environments and editor settings.
+.venv/
+venv/
+.vscode/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Preserve source provenance and fixed split manifests, but omit large caches.
+/data/raw/*
+!/data/raw/provenance.json
+/data/processed/images.npy
+
+# Rebuilt data, new runs, environments and temporary files are not published.
+/results/reproduction/
+/results/retraining/
+/results/demo-rebuild/
+/tmp/
+last.pt
+*.pt.tmp
+*.tmp
+*.lock
+.env
+.env.*
+*.log
+**/batches/
+**/progress.json
+**/.DS_Store

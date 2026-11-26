@@ -1,0 +1,121 @@
+{
+  "protocol_sha256": "c42e00a09b5a522e9c43fbbb22f31b4ca5b9f9eceb95aa7ddfa0e549b9f5baf2",
+  "definition": {
+    "schema_version": 1,
+    "scope": "full_test",
+    "smoke_warning": null,
+    "data_sha256": {
+      "images.npy": "9264a2d0e3a95a95db179cc5c887bb237a7cd73247de9779a15990780e5b1ee3",
+      "labels.npy": "7349a794f022449a515c0876b9c40175ef6a15ab967ad9e42ac76c6d8bf6c989",
+      "splits.npz": "93fcccac38c028367f3bf106030118be4f8f2637c0ddde5213a9c089dc3fb8b8",
+      "metadata.csv": "2dc3f46be596e93be5b6ffc5ef7d1c09191e9e94c01e63ea1ef77a014ccf0682"
+    },
+    "runs": [
+      {
+        "method": "clean",
+        "seed": 77,
+        "checkpoint": "models/clean_seed77.pt",
+        "checkpoint_sha256": "2422f9dac8a34989a3da49315c0a1d074c7af48ed58962a10621386f48bbbbad"
+      },
+      {
+        "method": "clean",
+        "seed": 78,
+        "checkpoint": "models/clean_seed78.pt",
+        "checkpoint_sha256": "cbdc6d19b2ddfd1f4183f4116c00f9866586eff9aaafba0900f632118c1ca664"
+      },
+      {
+        "method": "clean",
+        "seed": 79,
+        "checkpoint": "models/clean_seed79.pt",
+        "checkpoint_sha256": "9d52cf558da4b9f4033be735b7f8787cbd27601e32cac659bb7062c9742320bf"
+      },
+      {
+        "method": "noise",
+        "seed": 77,
+        "checkpoint": "models/noise_seed77.pt",
+        "checkpoint_sha256": "224e0e0df3d87ca8e2d92147326c5b3b46c6d12c4141d89ff6541c95e2c08f43"
+      },
+      {
+        "method": "noise",
+        "seed": 78,
+        "checkpoint": "models/noise_seed78.pt",
+        "checkpoint_sha256": "2e5ea69feb64d9f3107178035beaaa32a704bbb12356cb0a99b471d119aa2a49"
+      },
+      {
+        "method": "noise",
+        "seed": 79,
+        "checkpoint": "models/noise_seed79.pt",
+        "checkpoint_sha256": "1260548dcd4541632a34e7f976882290b29dea8e8e5cd43303df1de34d0d7fa4"
+      },
+      {
+        "method": "pgd",
+        "seed": 77,
+        "checkpoint": "models/pgd_seed77.pt",
+        "checkpoint_sha256": "033ecd1e4af3718da8bf9025b1ae6b080beeecc9620deddac515586e7fe09dec"
+      },
+      {
+        "method": "pgd",
+        "seed": 78,
+        "checkpoint": "models/pgd_seed78.pt",
+        "checkpoint_sha256": "b93d5279e98ee60e5011a5607aa21241128a2ac16965d0e3be12014606e4d970"
+      },
+      {
+        "method": "pgd",
+        "seed": 79,
+        "checkpoint": "models/pgd_seed79.pt",
+        "checkpoint_sha256": "47beb011dde0963079b5aa6945a7e9dfee0678c052fb3daae24d2d66072dc535"
+      }
+    ],
+    "code_sha256": {
+      "project/experiments.py": "5882a5ad58eda33d05c81fe02561ffd45f5e6a4850745afabe26733037af61b2",
+      "project/attacks.py": "5d5b8ca51bdb7d12062b45b83ca30c20242b70209b025f903ae6160c892277b4",
+      "project/wafer_model.py": "50fd1921fd78b748c6cd32021631e19bb9a81845cc99d0c1aff35375182a8bac",
+      "project/artifact_paths.py": "bb586ce5b2d96907f15b19b520cdb581a0049689c4823ece17934cb55b5d910b"
+    },
+    "selected_indices_sha256": "41d9b3bcac4a852d25e6d8d48b13c4002671c07cf73c61752f92453c555410e8",
+    "n": 25485,
+    "class_counts": {
+      "Center": 583,
+      "Donut": 100,
+      "Edge-Loc": 774,
+      "Edge-Ring": 1420,
+      "Loc": 536,
+      "Random": 130,
+      "Scratch": 189,
+      "Near-full": 21,
+      "None": 21732
+    },
+    "targeted_n": 3753,
+    "batch_size": 64,
+    "sample_order": "ascending frozen cache_index; smoke first two test maps per class",
+    "epsilon": 0.03137254901960784,
+    "epsilon_255": 8,
+    "pgd_step_size": 0.00784313725490196,
+    "pgd20_steps": 20,
+    "pgd50_steps": 50,
+    "targeted_steps": 20,
+    "restarts": 5,
+    "attack_seed": "7701000 + 8*10000 + batch_start; shared PGD20/PGD50 starts",
+    "untargeted_selection": "Clean plus all visited candidates; misclassification first, then greatest unweighted CE(true label)",
+    "targeted_selection": "True defects only; clean plus all visited candidates; prediction None first, then smallest CE(None)",
+    "threat_model": "White-box continuous post-preprocessing L-infinity perturbations within fixed clean wafer mask; values clipped to [0,1]",
+    "input_encoding": "original 0/1/2 uint8 divided by 2; continuous digital threat, not physical die flips",
+    "checkpoint_selection": "Reuse all nine frozen checkpoints selected by clean validation macro-F1; no retraining or test-based selection",
+    "device": "cuda",
+    "gpu": "NVIDIA GeForce GTX 1660 Ti",
+    "torch": "2.10.0+cu128",
+    "cuda_runtime": "12.8",
+    "numpy": "1.26.4",
+    "precision": "float32; no AMP or TF32; cuDNN deterministic; 4 CPU threads",
+    "aggregation": "Mean and sample SD (ddof=1) over complete sets of training seeds 77,78,79 on one fixed lot split",
+    "artifact_origin": "Saved original predictions and evaluation settings; file paths and checkpoint container metadata normalized for public distribution. Export source hashes identify the portable implementation, not a newly executed experiment."
+  },
+  "created_at_utc": "2026-11-26T08:53:55.679298+00:00",
+  "exported_at_utc": "2026-11-26T14:12:50.693762+00:00",
+  "original_execution_protocol_sha256": "75cdb65e691797a6c1eecd878a68445f9ff78bd045e1f82660f23168f190bb17",
+  "original_execution_source_sha256": {
+    "experiment_evaluator": "727f2faa9ae1e1c319d79f44095f56eb1d3117b3dc61bf9fb97355aa2d47244f",
+    "attack_implementation": "9de7b33a47c7bff107496329e3ea6963f131ac649fe572ff374c5bfbed276b30",
+    "classifier_definition": "29b73a162a4e4ec1dc646328b10596a800c5c69e643a29ccdf950ffca596a037"
+  }
+}

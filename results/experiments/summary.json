@@ -1,0 +1,7434 @@
+{
+  "schema_version": 1,
+  "scope": "full_test",
+  "protocol_sha256": "c42e00a09b5a522e9c43fbbb22f31b4ca5b9f9eceb95aa7ddfa0e549b9f5baf2",
+  "updated_at_utc": "2026-11-26T12:18:48.217482+00:00",
+  "complete_conditions": [
+    "clean",
+    "fgsm8",
+    "pgd20",
+    "pgd50",
+    "targeted_none"
+  ],
+  "complete": true,
+  "completed_runs": 45,
+  "expected_runs": 45,
+  "runs": [
+    {
+      "method": "clean",
+      "seed": 77,
+      "condition": "clean",
+      "n": 25485,
+      "scope": "full_test",
+      "metrics": {
+        "n": 25485,
+        "accuracy": 0.956131057484795,
+        "macro_f1": 0.773230233295134,
+        "per_class_recall": {
+          "Center": 0.7289879931389366,
+          "Donut": 0.85,
+          "Edge-Loc": 0.7739018087855297,
+          "Edge-Ring": 0.9753521126760564,
+          "Loc": 0.5671641791044776,
+          "Random": 0.6923076923076923,
+          "Scratch": 0.42328042328042326,
+          "Near-full": 0.9523809523809523,
+          "None": 0.9837566721884778
+        },
+        "per_class_support": {
+          "Center": 583,
+          "Donut": 100,
+          "Edge-Loc": 774,
+          "Edge-Ring": 1420,
+          "Loc": 536,
+          "Random": 130,
+          "Scratch": 189,
+          "Near-full": 21,
+          "None": 21732
+        },
+        "defect_to_none_count": 372,
+        "true_defect_count": 3753,
+        "defect_to_none_rate": 0.0991207034372502,
+        "confusion_matrix": [
+          [
+            425,
+            14,
+            2,
+            0,
+            69,
+            0,
+            3,
+            0,
+            70
+          ],
+          [
+            1,
+            85,
+            0,
+            0,
+            7,
+            0,
+            7,
+            0,
+            0
+          ],
+          [
+            3,
+            1,
+            599,
+            22,
+            32,
+            2,
+            5,
+            0,
+            110
+          ],
+          [
+            0,
+            0,
+            25,
+            1385,
+            0,
+            0,
+            0,
+            0,
+            10
+          ],
+          [
+            36,
+            20,
+            41,
+            2,
+            304,
+            1,
+            30,
+            0,
+            102
+          ],
+          [
+            0,
+            9,
+            12,
+            0,
+            15,
+            90,
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            0,
+            4,
+            1,
+            24,
+            0,
+            80,
+            0,
+            79
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            20,
+            0
+          ],
+          [
+            13,
+            2,
+            127,
+            40,
+            112,
+            0,
+            59,
+            0,
+            21379
+          ]
+        ]
+      },
+      "seconds": 3.242498699866701,
+      "predictions_path": "runs/clean_seed77/clean/predictions.csv",
+      "metrics_path": "runs/clean_seed77/clean/metrics.json"
+    },
+    {
+      "method": "clean",
+      "seed": 77,
+      "condition": "fgsm8",
+      "n": 25485,
+      "scope": "full_test",
+      "metrics": {
+        "n": 25485,
+        "accuracy": 0.7901118304885226,
+        "macro_f1": 0.4649453551242801,
+        "per_class_recall": {
+          "Center": 0.44939965694682676,
+          "Donut": 0.55,
+          "Edge-Loc": 0.46382428940568476,
+          "Edge-Ring": 0.902112676056338,
+          "Loc": 0.13805970149253732,
+          "Random": 0.36153846153846153,
+          "Scratch": 0.06349206349206349,
+          "Near-full": 0.7619047619047619,
+          "None": 0.8296521258972943
+        },
+        "per_class_support": {
+          "Center": 583,
+          "Donut": 100,
+          "Edge-Loc": 774,
+          "Edge-Ring": 1420,
+          "Loc": 536,
+          "Random": 130,
+          "Scratch": 189,
+          "Near-full": 21,
+          "None": 21732
+        },
+        "defect_to_none_count": 665,
+        "true_defect_count": 3753,
+        "defect_to_none_rate": 0.1771915800692779,
+        "confusion_matrix": [
+          [
+            262,
+            46,
+            18,
+            0,
+            134,
+            0,
+            12,
+            0,
+            111
+          ],
+          [
+            8,
+            55,
+            0,
+            0,
+            27,
+            0,
+            7,
+            0,
+            3
+          ],
+          [
+            8,
+            13,
+            359,
+            71,
+            73,
+            6,
+            37,
+            0,
+            207
+          ],
+          [
+            0,
+            1,
+            72,
+            1281,
+            4,
+            0,
+            7,
+            0,
+            55
+          ],
+          [
+            101,
+            57,
+            72,
+            3,
+            74,
+            1,
+            65,
+            1,
+            162
+          ],
+          [
+            3,
+            13,
+            36,
+            1,
+            17,
+            47,
+            3,
+            3,
+            7
+          ],
+          [
+            10,
+            0,
+            11,
+            1,
+            35,
+            0,
+            12,
+            0,
+            120
+          ],
+          [
+            0,
+            0,
+            3,
+            0,
+            0,
+            2,
+            0,
+            16,
+            0
+          ],
+          [
+            313,
+            22,
+            1406,
+            115,
+            1268,
+            0,
+            578,
+            0,
+            18030
+          ]
+        ]
+      },
+      "seconds": 7.702177800092613,
+      "predictions_path": "runs/clean_seed77/fgsm8/predictions.csv",
+      "metrics_path": "runs/clean_seed77/fgsm8/metrics.json"
+    },
+    {
+      "method": "clean",
+      "seed": 77,
+      "condition": "pgd20",
+      "n": 25485,
+      "scope": "full_test",
+      "metrics": {
+        "n": 25485,
+        "accuracy": 0.7156758877771238,
+        "macro_f1": 0.4085327459934586,
+        "per_class_recall": {
+          "Center": 0.3481989708404803,
+          "Donut": 0.45,
+          "Edge-Loc": 0.35917312661498707,
+          "Edge-Ring": 0.8901408450704226,
+          "Loc": 0.07462686567164178,
+          "Random": 0.3153846153846154,
+          "Scratch": 0.05291005291005291,
+          "Near-full": 0.7619047619047619,
+          "None": 0.751978648996871
+        },
+        "per_class_support": {
+          "Center": 583,
+          "Donut": 100,
+          "Edge-Loc": 774,
+          "Edge-Ring": 1420,
+          "Loc": 536,
+          "Random": 130,
+          "Scratch": 189,
+          "Near-full": 21,
+          "None": 21732
+        },
+        "defect_to_none_count": 787,
+        "true_defect_count": 3753,
+        "defect_to_none_rate": 0.20969890754063417,
+        "confusion_matrix": [
+          [
+            203,
+            60,
+            27,
+            0,
+            145,
+            0,
+            24,
+            0,
+            124
+          ],
+          [
+            20,
+            45,
+            0,
+            0,
+            25,
+            0,
+            4,
+            0,
+            6
+          ],
+          [
+            8,
+            17,
+            278,
+            87,
+            82,
+            5,
+            47,
+            1,
+            249
+          ],
+          [
+            0,
+            1,
+            66,
+            1264,
+            0,
+            0,
+            13,
+            0,
+            76
+          ],
+          [
+            96,
+            68,
+            81,
+            4,
+            40,
+            1,
+            58,
+            1,
+            187
+          ],
+          [
+            3,
+            14,
+            35,
+            5,
+            15,
+            41,
+            3,
+            4,
+            10
+          ],
+          [
+            10,
+            1,
+            8,
+            3,
+            22,
+            0,
+            10,
+            0,
+            135
+          ],
+          [
+            0,
+            0,
+            3,
+            0,
+            0,
+            2,
+            0,
+            16,
+            0
+          ],
+          [
+            488,
+            36,
+            2085,
+            122,
+            1586,
+            0,
+            1073,
+            0,
+            16342
+          ]
+        ]
+      },
+      "seconds": 351.23583839970524,
+      "predictions_path": "runs/clean_seed77/pgd20/predictions.csv",
+      "metrics_path": "runs/clean_seed77/pgd20/metrics.json"
+    },
+    {
+      "method": "clean",
+      "seed": 77,
+      "condition": "pgd50",
+      "n": 25485,
+      "scope": "full_test",
+      "metrics": {
+        "n": 25485,
+        "accuracy": 0.7122228762016872,
+        "macro_f1": 0.40604343402944665,
+        "per_class_recall": {
+          "Center": 0.34133790737564323,
+          "Donut": 0.45,
+          "Edge-Loc": 0.35658914728682173,
+          "Edge-Ring": 0.8894366197183099,
+          "Loc": 0.07276119402985075,
+          "Random": 0.3076923076923077,
+          "Scratch": 0.05291005291005291,
+          "Near-full": 0.7619047619047619,
+          "None": 0.7483434566537824
+        },
+        "per_class_support": {
+          "Center": 583,
+          "Donut": 100,
+          "Edge-Loc": 774,
+          "Edge-Ring": 1420,
+          "Loc": 536,
+          "Random": 130,
+          "Scratch": 189,
+          "Near-full": 21,
+          "None": 21732
+        },
+        "defect_to_none_count": 792,
+        "true_defect_count": 3753,
+        "defect_to_none_rate": 0.21103117505995203,
+        "confusion_matrix": [
+          [
+            199,
+            60,
+            27,
+            0,
+            148,
+            0,
+            24,
+            0,
+            125
+          ],
+          [
+            20,
+            45,
+            0,
+            0,
+            25,
+            0,
+            4,
+            0,
+            6
+          ],
+          [
+            8,
+            17,
+            276,
+            87,
+            81,
+            5,
+            48,
+            1,
+            251
+          ],
+          [
+            0,
+            1,
+            66,
+            1263,
+            0,
+            0,
+            14,
+            0,
+            76
+          ],
+          [
+            94,
+            69,
+            82,
+            5,
+            39,
+            1,
+            57,
+            1,
+            188
+          ],
+          [
+            3,
+            14,
+            37,
+            5,
+            15,
+            40,
+            2,
+            4,
+            10
+          ],
+          [
+            10,
+            1,
+            7,
+            3,
+            22,
+            0,
+            10,
+            0,
+            136
+          ],
+          [
+            0,
+            0,
+            3,
+            0,
+            0,
+            2,
+            0,
+            16,
+            0
+          ],
+          [
+            491,
+            38,
+            2111,
+            120,
+            1604,
+            0,
+            1105,
+            0,
+            16263
+          ]
+        ]
+      },
+      "seconds": 846.151072200184,
+      "predictions_path": "runs/clean_seed77/pgd50/predictions.csv",
+      "metrics_path": "runs/clean_seed77/pgd50/metrics.json"
+    },
+    {
+      "method": "clean",
+      "seed": 77,
+      "condition": "targeted_none",
+      "n": 3753,
+      "scope": "full_test_defects",
+      "metrics": {
+        "n": 3753,
+        "accuracy": 0.6693312017053025,
+        "macro_f1": 0.6127484142069951,
+        "per_class_recall": {
+          "Center": 0.614065180102916,
+          "Donut": 0.66,
+          "Edge-Loc": 0.5710594315245479,
+          "Edge-Ring": 0.9147887323943662,
+          "Loc": 0.4197761194029851,
+          "Random": 0.6076923076923076,
+          "Scratch": 0.13227513227513227,
+          "Near-full": 0.8571428571428571,
+          "None": 0.0
+        },
+        "per_class_support": {
+          "Center": 583,
+          "Donut": 100,
+          "Edge-Loc": 774,
+          "Edge-Ring": 1420,
+          "Loc": 536,
+          "Random": 130,
+          "Scratch": 189,
+          "Near-full": 21,
+          "None": 0
+        },
+        "defect_to_none_count": 990,
+        "true_defect_count": 3753,
+        "defect_to_none_rate": 0.2637889688249401,
+        "confusion_matrix": [
+          [
+            358,
+            7,
+            2,
+            0,
+            57,
+            0,
+            1,
+            0,
+            158
+          ],
+          [
+            2,
+            66,
+            0,
+            0,
+            22,
+            0,
+            4,
+            0,
+            6
+          ],
+          [
+            2,
+            1,
+            442,
+            3,
+            21,
+            0,
+            2,
+            0,
+            303
+          ],
+          [
+            0,
+            0,
+            27,
+            1299,
+            0,
+            0,
+            0,
+            0,
+            94
+          ],
+          [
+            23,
+            3,
+            24,
+            0,
+            225,
+            1,
+            11,
+            0,
+            249
+          ],
+          [
+            0,
+            2,
+            13,
+            0,
+            14,
+            79,
+            1,
+            0,
+            21
+          ],
+          [
+            1,
+            0,
+            1,
+            0,
+            3,
+            0,
+            25,
+            0,
+            159
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            2,
+            0,
+            18,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "target_class": "None",
+        "target_class_id": 8,
+        "target_success_count": 990,
+        "target_success_denominator": 3753,
+        "target_success_rate": 0.2637889688249401,
+        "clean_correct_defect_success_count": 466,
+        "clean_correct_defect_denominator": 2988,
+        "clean_correct_defect_success_rate": 0.15595716198125836,
+        "baseline_clean_defect_to_none_count": 372,
+        "baseline_clean_defect_to_none_rate": 0.0991207034372502,
+        "new_target_success_count": 618
+      },
+      "seconds": 49.36169239986339,
+      "predictions_path": "runs/clean_seed77/targeted_none/predictions.csv",
+      "metrics_path": "runs/clean_seed77/targeted_none/metrics.json"
+    },
+    {
+      "method": "clean",
+      "seed": 78,
+      "condition": "clean",
+      "n": 25485,
+      "scope": "full_test",
+      "metrics": {
+        "n": 25485,
+        "accuracy": 0.9587992937021778,
+        "macro_f1": 0.7578547095766943,
+        "per_class_recall": {
+          "Center": 0.8044596912521441,
+          "Donut": 0.74,
+          "Edge-Loc": 0.6757105943152455,
+          "Edge-Ring": 0.9725352112676057,
+          "Loc": 0.375,
+          "Random": 0.8846153846153846,
+          "Scratch": 0.3386243386243386,
+          "Near-full": 0.9047619047619048,
+          "None": 0.9934198417080803
+        },
+        "per_class_support": {
+          "Center": 583,
+          "Donut": 100,
+          "Edge-Loc": 774,
+          "Edge-Ring": 1420,
+          "Loc": 536,
+          "Random": 130,
+          "Scratch": 189,
+          "Near-full": 21,
+          "None": 21732
+        },
+        "defect_to_none_count": 477,
+        "true_defect_count": 3753,
+        "defect_to_none_rate": 0.12709832134292565,
+        "confusion_matrix": [
+          [
+            469,
+            4,
+            1,
+            0,
+            32,
+            1,
+            5,
+            0,
+            71
+          ],
+          [
+            9,
+            74,
+            0,
+            0,
+            10,
+            0,
+            4,
+            0,
+            3
+          ],
+          [
+            8,
+            3,
+            523,
+            32,
+            27,
+            11,
+            9,
+            1,
+            160
+          ],
+          [
+            0,
+            0,
+            17,
+            1381,
+            0,
+            0,
+            0,
+            0,
+            22
+          ],
+          [
+            118,
+            7,
+            31,
+            1,
+            201,
+            1,
+            50,
+            1,
+            126
+          ],
+          [
+            3,
+            1,
+            4,
+            0,
+            3,
+            115,
+            0,
+            2,
+            2
+          ],
+          [
+            6,
+            0,
+            4,
+            0,
+            22,
+            0,
+            64,
+            0,
+            93
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            19,
+            0
+          ],
+          [
+            26,
+            0,
+            32,
+            19,
+            33,
+            6,
+            27,
+            0,
+            21589
+          ]
+        ]
+      },
+      "seconds": 3.7926662997924723,
+      "predictions_path": "runs/clean_seed78/clean/predictions.csv",
+      "metrics_path": "runs/clean_seed78/clean/metrics.json"
+    },
+    {
+      "method": "clean",
+      "seed": 78,
+      "condition": "fgsm8",
+      "n": 25485,
+      "scope": "full_test",
+      "metrics": {
+        "n": 25485,
+        "accuracy": 0.8588581518540318,
+        "macro_f1": 0.5067897268640102,
+        "per_class_recall": {
+          "Center": 0.6226415094339622,
+          "Donut": 0.35,
+          "Edge-Loc": 0.39405684754521964,
+          "Edge-Ring": 0.8929577464788733,
+          "Loc": 0.09701492537313433,
+          "Random": 0.6153846153846154,
+          "Scratch": 0.047619047619047616,
+          "Near-full": 0.8571428571428571,
+          "None": 0.9091662065157372
+        },
+        "per_class_support": {
+          "Center": 583,
+          "Donut": 100,
+          "Edge-Loc": 774,
+          "Edge-Ring": 1420,
+          "Loc": 536,
+          "Random": 130,
+          "Scratch": 189,
+          "Near-full": 21,
+          "None": 21732
+        },
+        "defect_to_none_count": 819,
+        "true_defect_count": 3753,
+        "defect_to_none_rate": 0.2182254196642686,
+        "confusion_matrix": [
+          [
+            363,
+            15,
+            6,
+            0,
+            70,
+            2,
+            16,
+            0,
+            111
+          ],
+          [
+            37,
+            35,
+            0,
+            0,
+            19,
+            0,
+            3,
+            0,
+            6
+          ],
+          [
+            15,
+            6,
+            305,
+            70,
+            56,
+            22,
+            29,
+            1,
+            270
+          ],
+          [
+            2,
+            0,
+            63,
+            1268,
+            2,
+            2,
+            0,
+            0,
+            83
+          ],
+          [
+            165,
+            16,
+            43,
+            2,
+            52,
+            5,
+            54,
+            1,
+            198
+          ],
+          [
+            17,
+            5,
+            7,
+            1,
+            7,
+            80,
+            0,
+            3,
+            10
+          ],
+          [
+            14,
+            0,
+            4,
+            0,
+            21,
+            0,
+            9,
+            0,
+            141
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            3,
+            0,
+            18,
+            0
+          ],
+          [
+            497,
+            1,
+            494,
+            78,
+            418,
+            13,
+            473,
+            0,
+            19758
+          ]
+        ]
+      },
+      "seconds": 7.663831099751405,
+      "predictions_path": "runs/clean_seed78/fgsm8/predictions.csv",
+      "metrics_path": "runs/clean_seed78/fgsm8/metrics.json"
+    },
+    {
+      "method": "clean",
+      "seed": 78,
+      "condition": "pgd20",
+      "n": 25485,
+      "scope": "full_test",
+      "metrics": {
+        "n": 25485,
+        "accuracy": 0.8120070629782224,
+        "macro_f1": 0.46188586794969805,
+        "per_class_recall": {
+          "Center": 0.5746140651801029,
+          "Donut": 0.3,
+          "Edge-Loc": 0.3178294573643411,
+          "Edge-Ring": 0.8830985915492958,
+          "Loc": 0.04664179104477612,
+          "Random": 0.5769230769230769,
+          "Scratch": 0.010582010582010581,
+          "Near-full": 0.8571428571428571,
+          "None": 0.8608963740106755
+        },
+        "per_class_support": {
+          "Center": 583,
+          "Donut": 100,
+          "Edge-Loc": 774,
+          "Edge-Ring": 1420,
+          "Loc": 536,
+          "Random": 130,
+          "Scratch": 189,
+          "Near-full": 21,
+          "None": 21732
+        },
+        "defect_to_none_count": 951,
+        "true_defect_count": 3753,
+        "defect_to_none_rate": 0.2533972821742606,
+        "confusion_matrix": [
+          [
+            335,
+            18,
+            7,
+            0,
+            73,
+            4,
+            18,
+            0,
+            128
+          ],
+          [
+            39,
+            30,
+            0,
+            0,
+            21,
+            0,
+            3,
+            0,
+            7
+          ],
+          [
+            18,
+            6,
+            246,
+            78,
+            52,
+            22,
+            37,
+            2,
+            313
+          ],
+          [
+            5,
+            0,
+            55,
+            1254,
+            1,
+            2,
+            1,
+            0,
+            102
+          ],
+          [
+            168,
+            20,
+            46,
+            4,
+            25,
+            5,
+            34,
+            1,
+            233
+          ],
+          [
+            17,
+            4,
+            10,
+            2,
+            3,
+            75,
+            0,
+            3,
+            16
+          ],
+          [
+            15,
+            0,
+            4,
+            1,
+            15,
+            0,
+            2,
+            0,
+            152
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            3,
+            0,
+            18,
+            0
+          ],
+          [
+            701,
+            2,
+            714,
+            92,
+            575,
+            19,
+            920,
+            0,
+            18709
+          ]
+        ]
+      },
+      "seconds": 359.9762971003365,
+      "predictions_path": "runs/clean_seed78/pgd20/predictions.csv",
+      "metrics_path": "runs/clean_seed78/pgd20/metrics.json"
+    },
+    {
+      "method": "clean",
+      "seed": 78,
+      "condition": "pgd50",
+      "n": 25485,
+      "scope": "full_test",
+      "metrics": {
+        "n": 25485,
+        "accuracy": 0.8103590347263095,
+        "macro_f1": 0.4606945127781473,
+        "per_class_recall": {
+          "Center": 0.5711835334476844,
+          "Donut": 0.3,
+          "Edge-Loc": 0.3152454780361757,
+          "Edge-Ring": 0.8830985915492958,
+          "Loc": 0.04664179104477612,
+          "Random": 0.5769230769230769,
+          "Scratch": 0.010582010582010581,
+          "Near-full": 0.8571428571428571,
+          "None": 0.859147800478557
+        },
+        "per_class_support": {
+          "Center": 583,
+          "Donut": 100,
+          "Edge-Loc": 774,
+          "Edge-Ring": 1420,
+          "Loc": 536,
+          "Random": 130,
+          "Scratch": 189,
+          "Near-full": 21,
+          "None": 21732
+        },
+        "defect_to_none_count": 953,
+        "true_defect_count": 3753,
+        "defect_to_none_rate": 0.25393018918198773,
+        "confusion_matrix": [
+          [
+            333,
+            19,
+            7,
+            0,
+            73,
+            4,
+            18,
+            0,
+            129
+          ],
+          [
+            39,
+            30,
+            0,
+            0,
+            21,
+            0,
+            3,
+            0,
+            7
+          ],
+          [
+            18,
+            6,
+            244,
+            79,
+            52,
+            22,
+            37,
+            2,
+            314
+          ],
+          [
+            5,
+            0,
+            55,
+            1254,
+            1,
+            2,
+            2,
+            0,
+            101
+          ],
+          [
+            167,
+            20,
+            46,
+            4,
+            25,
+            5,
+            34,
+            1,
+            234
+          ],
+          [
+            17,
+            4,
+            10,
+            2,
+            3,
+            75,
+            0,
+            3,
+            16
+          ],
+          [
+            15,
+            0,
+            4,
+            1,
+            15,
+            0,
+            2,
+            0,
+            152
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            3,
+            0,
+            18,
+            0
+          ],
+          [
+            707,
+            3,
+            721,
+            92,
+            578,
+            19,
+            941,
+            0,
+            18671
+          ]
+        ]
+      },
+      "seconds": 839.8373408998887,
+      "predictions_path": "runs/clean_seed78/pgd50/predictions.csv",
+      "metrics_path": "runs/clean_seed78/pgd50/metrics.json"
+    },
+    {
+      "method": "clean",
+      "seed": 78,
+      "condition": "targeted_none",
+      "n": 3753,
+      "scope": "full_test_defects",
+      "metrics": {
+        "n": 3753,
+        "accuracy": 0.6314948041566747,
+        "macro_f1": 0.5727099544640113,
+        "per_class_recall": {
+          "Center": 0.6792452830188679,
+          "Donut": 0.43,
+          "Edge-Loc": 0.4728682170542636,
+          "Edge-Ring": 0.9042253521126761,
+          "Loc": 0.2798507462686567,
+          "Random": 0.7307692307692307,
+          "Scratch": 0.08994708994708994,
+          "Near-full": 0.9047619047619048,
+          "None": 0.0
+        },
+        "per_class_support": {
+          "Center": 583,
+          "Donut": 100,
+          "Edge-Loc": 774,
+          "Edge-Ring": 1420,
+          "Loc": 536,
+          "Random": 130,
+          "Scratch": 189,
+          "Near-full": 21,
+          "None": 0
+        },
+        "defect_to_none_count": 1105,
+        "true_defect_count": 3753,
+        "defect_to_none_rate": 0.2944311217692513,
+        "confusion_matrix": [
+          [
+            396,
+            0,
+            0,
+            0,
+            27,
+            0,
+            3,
+            0,
+            157
+          ],
+          [
+            16,
+            43,
+            0,
+            0,
+            30,
+            0,
+            4,
+            0,
+            7
+          ],
+          [
+            4,
+            2,
+            366,
+            6,
+            19,
+            7,
+            7,
+            1,
+            362
+          ],
+          [
+            0,
+            0,
+            20,
+            1284,
+            0,
+            0,
+            0,
+            0,
+            116
+          ],
+          [
+            73,
+            1,
+            16,
+            0,
+            150,
+            1,
+            26,
+            0,
+            269
+          ],
+          [
+            3,
+            1,
+            4,
+            0,
+            3,
+            95,
+            0,
+            0,
+            24
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            17,
+            0,
+            170
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            19,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "target_class": "None",
+        "target_class_id": 8,
+        "target_success_count": 1105,
+        "target_success_denominator": 3753,
+        "target_success_rate": 0.2944311217692513,
+        "clean_correct_defect_success_count": 453,
+        "clean_correct_defect_denominator": 2846,
+        "clean_correct_defect_success_rate": 0.15917076598735067,
+        "baseline_clean_defect_to_none_count": 477,
+        "baseline_clean_defect_to_none_rate": 0.12709832134292565,
+        "new_target_success_count": 628
+      },
+      "seconds": 49.216808099794434,
+      "predictions_path": "runs/clean_seed78/targeted_none/predictions.csv",
+      "metrics_path": "runs/clean_seed78/targeted_none/metrics.json"
+    },
+    {
+      "method": "clean",
+      "seed": 79,
+      "condition": "clean",
+      "n": 25485,
+      "scope": "full_test",
+      "metrics": {
+        "n": 25485,
+        "accuracy": 0.9542083578575633,
+        "macro_f1": 0.7737226633520722,
+        "per_class_recall": {
+          "Center": 0.7084048027444254,
+          "Donut": 0.82,
+          "Edge-Loc": 0.8126614987080103,
+          "Edge-Ring": 0.9661971830985916,
+          "Loc": 0.5970149253731343,
+          "Random": 0.8923076923076924,
+          "Scratch": 0.3439153439153439,
+          "Near-full": 0.9523809523809523,
+          "None": 0.9801674949383398
+        },
+        "per_class_support": {
+          "Center": 583,
+          "Donut": 100,
+          "Edge-Loc": 774,
+          "Edge-Ring": 1420,
+          "Loc": 536,
+          "Random": 130,
+          "Scratch": 189,
+          "Near-full": 21,
+          "None": 21732
+        },
+        "defect_to_none_count": 321,
+        "true_defect_count": 3753,
+        "defect_to_none_rate": 0.08553157474020784,
+        "confusion_matrix": [
+          [
+            413,
+            12,
+            4,
+            0,
+            81,
+            2,
+            7,
+            0,
+            64
+          ],
+          [
+            1,
+            82,
+            0,
+            0,
+            9,
+            0,
+            7,
+            0,
+            1
+          ],
+          [
+            3,
+            1,
+            629,
+            13,
+            28,
+            5,
+            7,
+            0,
+            88
+          ],
+          [
+            0,
+            0,
+            40,
+            1372,
+            0,
+            0,
+            1,
+            0,
+            7
+          ],
+          [
+            22,
+            15,
+            61,
+            1,
+            320,
+            2,
+            23,
+            1,
+            91
+          ],
+          [
+            0,
+            1,
+            4,
+            0,
+            6,
+            116,
+            0,
+            2,
+            1
+          ],
+          [
+            0,
+            0,
+            11,
+            0,
+            44,
+            0,
+            65,
+            0,
+            69
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            20,
+            0
+          ],
+          [
+            10,
+            0,
+            177,
+            29,
+            139,
+            8,
+            68,
+            0,
+            21301
+          ]
+        ]
+      },
+      "seconds": 3.936202900164062,
+      "predictions_path": "runs/clean_seed79/clean/predictions.csv",
+      "metrics_path": "runs/clean_seed79/clean/metrics.json"
+    },
+    {
+      "method": "clean",
+      "seed": 79,
+      "condition": "fgsm8",
+      "n": 25485,
+      "scope": "full_test",
+      "metrics": {
+        "n": 25485,
+        "accuracy": 0.7312144398665882,
+        "macro_f1": 0.4694512755212126,
+        "per_class_recall": {
+          "Center": 0.4219554030874786,
+          "Donut": 0.49,
+          "Edge-Loc": 0.5310077519379846,
+          "Edge-Ring": 0.8943661971830986,
+          "Loc": 0.19962686567164178,
+          "Random": 0.5461538461538461,
+          "Scratch": 0.031746031746031744,
+          "Near-full": 0.7142857142857143,
+          "None": 0.7574084299650286
+        },
+        "per_class_support": {
+          "Center": 583,
+          "Donut": 100,
+          "Edge-Loc": 774,
+          "Edge-Ring": 1420,
+          "Loc": 536,
+          "Random": 130,
+          "Scratch": 189,
+          "Near-full": 21,
+          "None": 21732
+        },
+        "defect_to_none_count": 564,
+        "true_defect_count": 3753,
+        "defect_to_none_rate": 0.15027977617905675,
+        "confusion_matrix": [
+          [
+            246,
+            28,
+            40,
+            0,
+            161,
+            6,
+            17,
+            0,
+            85
+          ],
+          [
+            6,
+            49,
+            0,
+            0,
+            34,
+            1,
+            5,
+            0,
+            5
+          ],
+          [
+            8,
+            6,
+            411,
+            47,
+            68,
+            14,
+            46,
+            2,
+            172
+          ],
+          [
+            0,
+            1,
+            81,
+            1270,
+            9,
+            2,
+            24,
+            0,
+            33
+          ],
+          [
+            82,
+            43,
+            86,
+            1,
+            107,
+            4,
+            64,
+            1,
+            148
+          ],
+          [
+            1,
+            6,
+            29,
+            0,
+            9,
+            71,
+            1,
+            3,
+            10
+          ],
+          [
+            6,
+            0,
+            9,
+            3,
+            54,
+            0,
+            6,
+            0,
+            111
+          ],
+          [
+            0,
+            0,
+            3,
+            0,
+            0,
+            3,
+            0,
+            15,
+            0
+          ],
+          [
+            189,
+            9,
+            1677,
+            88,
+            2054,
+            15,
+            1240,
+            0,
+            16460
+          ]
+        ]
+      },
+      "seconds": 7.537448499992024,
+      "predictions_path": "runs/clean_seed79/fgsm8/predictions.csv",
+      "metrics_path": "runs/clean_seed79/fgsm8/metrics.json"
+    },
+    {
+      "method": "clean",
+      "seed": 79,
+      "condition": "pgd20",
+      "n": 25485,
+      "scope": "full_test",
+      "metrics": {
+        "n": 25485,
+        "accuracy": 0.5790857367078673,
+        "macro_f1": 0.4123592711848858,
+        "per_class_recall": {
+          "Center": 0.34476843910806176,
+          "Donut": 0.44,
+          "Edge-Loc": 0.42248062015503873,
+          "Edge-Ring": 0.8753521126760564,
+          "Loc": 0.10261194029850747,
+          "Random": 0.5307692307692308,
+          "Scratch": 0.015873015873015872,
+          "Near-full": 0.6666666666666666,
+          "None": 0.5890852199521444
+        },
+        "per_class_support": {
+          "Center": 583,
+          "Donut": 100,
+          "Edge-Loc": 774,
+          "Edge-Ring": 1420,
+          "Loc": 536,
+          "Random": 130,
+          "Scratch": 189,
+          "Near-full": 21,
+          "None": 21732
+        },
+        "defect_to_none_count": 711,
+        "true_defect_count": 3753,
+        "defect_to_none_rate": 0.18944844124700239,
+        "confusion_matrix": [
+          [
+            201,
+            37,
+            44,
+            0,
+            160,
+            7,
+            27,
+            0,
+            107
+          ],
+          [
+            11,
+            44,
+            1,
+            0,
+            34,
+            1,
+            4,
+            0,
+            5
+          ],
+          [
+            8,
+            9,
+            327,
+            58,
+            66,
+            17,
+            66,
+            2,
+            221
+          ],
+          [
+            0,
+            2,
+            76,
+            1243,
+            6,
+            6,
+            42,
+            0,
+            45
+          ],
+          [
+            91,
+            46,
+            81,
+            2,
+            55,
+            4,
+            56,
+            1,
+            200
+          ],
+          [
+            2,
+            6,
+            29,
+            0,
+            7,
+            69,
+            1,
+            3,
+            13
+          ],
+          [
+            6,
+            0,
+            5,
+            4,
+            51,
+            0,
+            3,
+            0,
+            120
+          ],
+          [
+            0,
+            0,
+            4,
+            0,
+            0,
+            3,
+            0,
+            14,
+            0
+          ],
+          [
+            373,
+            10,
+            2079,
+            96,
+            3441,
+            18,
+            2913,
+            0,
+            12802
+          ]
+        ]
+      },
+      "seconds": 364.6250176997564,
+      "predictions_path": "runs/clean_seed79/pgd20/predictions.csv",
+      "metrics_path": "runs/clean_seed79/pgd20/metrics.json"
+    },
+    {
+      "method": "clean",
+      "seed": 79,
+      "condition": "pgd50",
+      "n": 25485,
+      "scope": "full_test",
+      "metrics": {
+        "n": 25485,
+        "accuracy": 0.5682950755346282,
+        "macro_f1": 0.40979927593235455,
+        "per_class_recall": {
+          "Center": 0.34133790737564323,
+          "Donut": 0.44,
+          "Edge-Loc": 0.417312661498708,
+          "Edge-Ring": 0.8746478873239436,
+          "Loc": 0.09888059701492537,
+          "Random": 0.5307692307692308,
+          "Scratch": 0.015873015873015872,
+          "Near-full": 0.6666666666666666,
+          "None": 0.5768452052273145
+        },
+        "per_class_support": {
+          "Center": 583,
+          "Donut": 100,
+          "Edge-Loc": 774,
+          "Edge-Ring": 1420,
+          "Loc": 536,
+          "Random": 130,
+          "Scratch": 189,
+          "Near-full": 21,
+          "None": 21732
+        },
+        "defect_to_none_count": 715,
+        "true_defect_count": 3753,
+        "defect_to_none_rate": 0.1905142552624567,
+        "confusion_matrix": [
+          [
+            199,
+            38,
+            46,
+            0,
+            159,
+            7,
+            27,
+            0,
+            107
+          ],
+          [
+            11,
+            44,
+            1,
+            0,
+            34,
+            1,
+            4,
+            0,
+            5
+          ],
+          [
+            8,
+            9,
+            323,
+            60,
+            66,
+            17,
+            66,
+            2,
+            223
+          ],
+          [
+            0,
+            2,
+            76,
+            1242,
+            6,
+            6,
+            43,
+            0,
+            45
+          ],
+          [
+            92,
+            46,
+            81,
+            2,
+            53,
+            4,
+            56,
+            1,
+            201
+          ],
+          [
+            2,
+            6,
+            29,
+            0,
+            7,
+            69,
+            1,
+            3,
+            13
+          ],
+          [
+            6,
+            0,
+            6,
+            4,
+            49,
+            0,
+            3,
+            0,
+            121
+          ],
+          [
+            0,
+            0,
+            4,
+            0,
+            0,
+            3,
+            0,
+            14,
+            0
+          ],
+          [
+            380,
+            10,
+            2090,
+            95,
+            3559,
+            19,
+            3043,
+            0,
+            12536
+          ]
+        ]
+      },
+      "seconds": 816.3283628002682,
+      "predictions_path": "runs/clean_seed79/pgd50/predictions.csv",
+      "metrics_path": "runs/clean_seed79/pgd50/metrics.json"
+    },
+    {
+      "method": "clean",
+      "seed": 79,
+      "condition": "targeted_none",
+      "n": 3753,
+      "scope": "full_test_defects",
+      "metrics": {
+        "n": 3753,
+        "accuracy": 0.6749267252864375,
+        "macro_f1": 0.611897037240176,
+        "per_class_recall": {
+          "Center": 0.5969125214408233,
+          "Donut": 0.65,
+          "Edge-Loc": 0.5956072351421189,
+          "Edge-Ring": 0.9070422535211268,
+          "Loc": 0.44216417910447764,
+          "Random": 0.7615384615384615,
+          "Scratch": 0.10052910052910052,
+          "Near-full": 0.7619047619047619,
+          "None": 0.0
+        },
+        "per_class_support": {
+          "Center": 583,
+          "Donut": 100,
+          "Edge-Loc": 774,
+          "Edge-Ring": 1420,
+          "Loc": 536,
+          "Random": 130,
+          "Scratch": 189,
+          "Near-full": 21,
+          "None": 0
+        },
+        "defect_to_none_count": 969,
+        "true_defect_count": 3753,
+        "defect_to_none_rate": 0.25819344524380494,
+        "confusion_matrix": [
+          [
+            348,
+            8,
+            2,
+            0,
+            70,
+            3,
+            0,
+            0,
+            152
+          ],
+          [
+            2,
+            65,
+            0,
+            0,
+            23,
+            0,
+            3,
+            0,
+            7
+          ],
+          [
+            2,
+            1,
+            461,
+            4,
+            12,
+            4,
+            0,
+            0,
+            290
+          ],
+          [
+            0,
+            0,
+            36,
+            1288,
+            0,
+            0,
+            0,
+            0,
+            96
+          ],
+          [
+            8,
+            4,
+            35,
+            0,
+            237,
+            2,
+            9,
+            0,
+            241
+          ],
+          [
+            0,
+            1,
+            4,
+            0,
+            4,
+            99,
+            0,
+            0,
+            22
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            8,
+            0,
+            19,
+            0,
+            161
+          ],
+          [
+            0,
+            0,
+            2,
+            0,
+            0,
+            3,
+            0,
+            16,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "target_class": "None",
+        "target_class_id": 8,
+        "target_success_count": 969,
+        "target_success_denominator": 3753,
+        "target_success_rate": 0.25819344524380494,
+        "clean_correct_defect_success_count": 473,
+        "clean_correct_defect_denominator": 3017,
+        "clean_correct_defect_success_rate": 0.15677825654623798,
+        "baseline_clean_defect_to_none_count": 321,
+        "baseline_clean_defect_to_none_rate": 0.08553157474020784,
+        "new_target_success_count": 648
+      },
+      "seconds": 49.35005289988476,
+      "predictions_path": "runs/clean_seed79/targeted_none/predictions.csv",
+      "metrics_path": "runs/clean_seed79/targeted_none/metrics.json"
+    },
+    {
+      "method": "noise",
+      "seed": 77,
+      "condition": "clean",
+      "n": 25485,
+      "scope": "full_test",
+      "metrics": {
+        "n": 25485,
+        "accuracy": 0.9575828918971945,
+        "macro_f1": 0.7713518151458232,
+        "per_class_recall": {
+          "Center": 0.7152658662092625,
+          "Donut": 0.83,
+          "Edge-Loc": 0.7816537467700259,
+          "Edge-Ring": 0.9767605633802817,
+          "Loc": 0.5354477611940298,
+          "Random": 0.7538461538461538,
+          "Scratch": 0.37037037037037035,
+          "Near-full": 0.9523809523809523,
+          "None": 0.9864255475796061
+        },
+        "per_class_support": {
+          "Center": 583,
+          "Donut": 100,
+          "Edge-Loc": 774,
+          "Edge-Ring": 1420,
+          "Loc": 536,
+          "Random": 130,
+          "Scratch": 189,
+          "Near-full": 21,
+          "None": 21732
+        },
+        "defect_to_none_count": 398,
+        "true_defect_count": 3753,
+        "defect_to_none_rate": 0.10604849453770317,
+        "confusion_matrix": [
+          [
+            417,
+            12,
+            3,
+            0,
+            71,
+            0,
+            8,
+            0,
+            72
+          ],
+          [
+            1,
+            83,
+            0,
+            0,
+            8,
+            0,
+            8,
+            0,
+            0
+          ],
+          [
+            3,
+            1,
+            605,
+            25,
+            20,
+            2,
+            4,
+            0,
+            114
+          ],
+          [
+            0,
+            0,
+            20,
+            1387,
+            0,
+            0,
+            0,
+            0,
+            13
+          ],
+          [
+            37,
+            21,
+            44,
+            1,
+            287,
+            1,
+            36,
+            1,
+            108
+          ],
+          [
+            1,
+            6,
+            10,
+            0,
+            9,
+            98,
+            2,
+            2,
+            2
+          ],
+          [
+            1,
+            0,
+            4,
+            0,
+            25,
+            0,
+            70,
+            0,
+            89
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            20,
+            0
+          ],
+          [
+            18,
+            1,
+            112,
+            35,
+            91,
+            1,
+            37,
+            0,
+            21437
+          ]
+        ]
+      },
+      "seconds": 3.790583999856608,
+      "predictions_path": "runs/noise_seed77/clean/predictions.csv",
+      "metrics_path": "runs/noise_seed77/clean/metrics.json"
+    },
+    {
+      "method": "noise",
+      "seed": 77,
+      "condition": "fgsm8",
+      "n": 25485,
+      "scope": "full_test",
+      "metrics": {
+        "n": 25485,
+        "accuracy": 0.8096919756719639,
+        "macro_f1": 0.4961605606112474,
+        "per_class_recall": {
+          "Center": 0.4734133790737564,
+          "Donut": 0.56,
+          "Edge-Loc": 0.4728682170542636,
+          "Edge-Ring": 0.9070422535211268,
+          "Loc": 0.13619402985074627,
+          "Random": 0.45384615384615384,
+          "Scratch": 0.1164021164021164,
+          "Near-full": 0.8571428571428571,
+          "None": 0.8502208724461623
+        },
+        "per_class_support": {
+          "Center": 583,
+          "Donut": 100,
+          "Edge-Loc": 774,
+          "Edge-Ring": 1420,
+          "Loc": 536,
+          "Random": 130,
+          "Scratch": 189,
+          "Near-full": 21,
+          "None": 21732
+        },
+        "defect_to_none_count": 693,
+        "true_defect_count": 3753,
+        "defect_to_none_rate": 0.18465227817745802,
+        "confusion_matrix": [
+          [
+            276,
+            41,
+            14,
+            0,
+            130,
+            0,
+            14,
+            0,
+            108
+          ],
+          [
+            13,
+            56,
+            0,
+            0,
+            21,
+            0,
+            6,
+            0,
+            4
+          ],
+          [
+            8,
+            10,
+            366,
+            78,
+            56,
+            7,
+            22,
+            1,
+            226
+          ],
+          [
+            0,
+            1,
+            67,
+            1288,
+            0,
+            0,
+            7,
+            0,
+            57
+          ],
+          [
+            116,
+            50,
+            69,
+            4,
+            73,
+            1,
+            62,
+            1,
+            160
+          ],
+          [
+            1,
+            11,
+            27,
+            2,
+            17,
+            59,
+            2,
+            3,
+            8
+          ],
+          [
+            7,
+            0,
+            5,
+            2,
+            23,
+            0,
+            22,
+            0,
+            130
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            2,
+            0,
+            18,
+            0
+          ],
+          [
+            216,
+            17,
+            1099,
+            87,
+            1055,
+            2,
+            779,
+            0,
+            18477
+          ]
+        ]
+      },
+      "seconds": 7.4659935000527184,
+      "predictions_path": "runs/noise_seed77/fgsm8/predictions.csv",
+      "metrics_path": "runs/noise_seed77/fgsm8/metrics.json"
+    },
+    {
+      "method": "noise",
+      "seed": 77,
+      "condition": "pgd20",
+      "n": 25485,
+      "scope": "full_test",
+      "metrics": {
+        "n": 25485,
+        "accuracy": 0.727722189523249,
+        "macro_f1": 0.4460135623540507,
+        "per_class_recall": {
+          "Center": 0.411663807890223,
+          "Donut": 0.47,
+          "Edge-Loc": 0.39147286821705424,
+          "Edge-Ring": 0.8908450704225352,
+          "Loc": 0.07835820895522388,
+          "Random": 0.4076923076923077,
+          "Scratch": 0.06349206349206349,
+          "Near-full": 0.8571428571428571,
+          "None": 0.7622860298177803
+        },
+        "per_class_support": {
+          "Center": 583,
+          "Donut": 100,
+          "Edge-Loc": 774,
+          "Edge-Ring": 1420,
+          "Loc": 536,
+          "Random": 130,
+          "Scratch": 189,
+          "Near-full": 21,
+          "None": 21732
+        },
+        "defect_to_none_count": 811,
+        "true_defect_count": 3753,
+        "defect_to_none_rate": 0.21609379163335998,
+        "confusion_matrix": [
+          [
+            240,
+            49,
+            23,
+            1,
+            133,
+            0,
+            19,
+            0,
+            118
+          ],
+          [
+            19,
+            47,
+            0,
+            0,
+            24,
+            0,
+            4,
+            0,
+            6
+          ],
+          [
+            7,
+            16,
+            303,
+            88,
+            57,
+            9,
+            32,
+            1,
+            261
+          ],
+          [
+            0,
+            1,
+            66,
+            1265,
+            0,
+            0,
+            15,
+            0,
+            73
+          ],
+          [
+            116,
+            54,
+            73,
+            6,
+            42,
+            1,
+            52,
+            1,
+            191
+          ],
+          [
+            3,
+            12,
+            25,
+            4,
+            14,
+            53,
+            1,
+            3,
+            15
+          ],
+          [
+            9,
+            0,
+            4,
+            4,
+            13,
+            0,
+            12,
+            0,
+            147
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            2,
+            0,
+            18,
+            0
+          ],
+          [
+            355,
+            23,
+            1569,
+            87,
+            1527,
+            3,
+            1602,
+            0,
+            16566
+          ]
+        ]
+      },
+      "seconds": 364.5497298997652,
+      "predictions_path": "runs/noise_seed77/pgd20/predictions.csv",
+      "metrics_path": "runs/noise_seed77/pgd20/metrics.json"
+    },
+    {
+      "method": "noise",
+      "seed": 77,
+      "condition": "pgd50",
+      "n": 25485,
+      "scope": "full_test",
+      "metrics": {
+        "n": 25485,
+        "accuracy": 0.7228565823033157,
+        "macro_f1": 0.44135544880009037,
+        "per_class_recall": {
+          "Center": 0.4099485420240137,
+          "Donut": 0.47,
+          "Edge-Loc": 0.39018087855297157,
+          "Edge-Ring": 0.8901408450704226,
+          "Loc": 0.07462686567164178,
+          "Random": 0.4076923076923077,
+          "Scratch": 0.06349206349206349,
+          "Near-full": 0.8095238095238095,
+          "None": 0.7568562488496227
+        },
+        "per_class_support": {
+          "Center": 583,
+          "Donut": 100,
+          "Edge-Loc": 774,
+          "Edge-Ring": 1420,
+          "Loc": 536,
+          "Random": 130,
+          "Scratch": 189,
+          "Near-full": 21,
+          "None": 21732
+        },
+        "defect_to_none_count": 813,
+        "true_defect_count": 3753,
+        "defect_to_none_rate": 0.21662669864108713,
+        "confusion_matrix": [
+          [
+            239,
+            49,
+            23,
+            1,
+            134,
+            0,
+            19,
+            0,
+            118
+          ],
+          [
+            19,
+            47,
+            0,
+            0,
+            24,
+            0,
+            4,
+            0,
+            6
+          ],
+          [
+            7,
+            16,
+            302,
+            89,
+            57,
+            9,
+            32,
+            1,
+            261
+          ],
+          [
+            0,
+            1,
+            66,
+            1264,
+            0,
+            0,
+            16,
+            0,
+            73
+          ],
+          [
+            116,
+            54,
+            73,
+            6,
+            40,
+            1,
+            52,
+            1,
+            193
+          ],
+          [
+            3,
+            12,
+            25,
+            4,
+            14,
+            53,
+            1,
+            3,
+            15
+          ],
+          [
+            9,
+            0,
+            4,
+            4,
+            13,
+            0,
+            12,
+            0,
+            147
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            3,
+            0,
+            17,
+            0
+          ],
+          [
+            359,
+            24,
+            1581,
+            87,
+            1568,
+            3,
+            1662,
+            0,
+            16448
+          ]
+        ]
+      },
+      "seconds": 873.1367341996229,
+      "predictions_path": "runs/noise_seed77/pgd50/predictions.csv",
+      "metrics_path": "runs/noise_seed77/pgd50/metrics.json"
+    },
+    {
+      "method": "noise",
+      "seed": 77,
+      "condition": "targeted_none",
+      "n": 3753,
+      "scope": "full_test_defects",
+      "metrics": {
+        "n": 3753,
+        "accuracy": 0.6805222488675726,
+        "macro_f1": 0.6232335017001406,
+        "per_class_recall": {
+          "Center": 0.6415094339622641,
+          "Donut": 0.69,
+          "Edge-Loc": 0.5801033591731266,
+          "Edge-Ring": 0.9183098591549296,
+          "Loc": 0.4291044776119403,
+          "Random": 0.6923076923076923,
+          "Scratch": 0.10582010582010581,
+          "Near-full": 0.8571428571428571,
+          "None": 0.0
+        },
+        "per_class_support": {
+          "Center": 583,
+          "Donut": 100,
+          "Edge-Loc": 774,
+          "Edge-Ring": 1420,
+          "Loc": 536,
+          "Random": 130,
+          "Scratch": 189,
+          "Near-full": 21,
+          "None": 0
+        },
+        "defect_to_none_count": 967,
+        "true_defect_count": 3753,
+        "defect_to_none_rate": 0.2576605382360778,
+        "confusion_matrix": [
+          [
+            374,
+            5,
+            2,
+            0,
+            55,
+            0,
+            0,
+            0,
+            147
+          ],
+          [
+            2,
+            69,
+            0,
+            0,
+            19,
+            0,
+            3,
+            0,
+            7
+          ],
+          [
+            2,
+            1,
+            449,
+            5,
+            17,
+            1,
+            2,
+            0,
+            297
+          ],
+          [
+            0,
+            0,
+            22,
+            1304,
+            0,
+            0,
+            0,
+            0,
+            94
+          ],
+          [
+            21,
+            5,
+            27,
+            0,
+            230,
+            1,
+            12,
+            0,
+            240
+          ],
+          [
+            1,
+            1,
+            6,
+            1,
+            10,
+            90,
+            0,
+            0,
+            21
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            7,
+            0,
+            20,
+            0,
+            161
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            2,
+            0,
+            18,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "target_class": "None",
+        "target_class_id": 8,
+        "target_success_count": 967,
+        "target_success_denominator": 3753,
+        "target_success_rate": 0.2576605382360778,
+        "clean_correct_defect_success_count": 430,
+        "clean_correct_defect_denominator": 2967,
+        "clean_correct_defect_success_rate": 0.14492753623188406,
+        "baseline_clean_defect_to_none_count": 398,
+        "baseline_clean_defect_to_none_rate": 0.10604849453770317,
+        "new_target_success_count": 569
+      },
+      "seconds": 50.15263599992613,
+      "predictions_path": "runs/noise_seed77/targeted_none/predictions.csv",
+      "metrics_path": "runs/noise_seed77/targeted_none/metrics.json"
+    },
+    {
+      "method": "noise",
+      "seed": 78,
+      "condition": "clean",
+      "n": 25485,
+      "scope": "full_test",
+      "metrics": {
+        "n": 25485,
+        "accuracy": 0.958524622326859,
+        "macro_f1": 0.7556041808608357,
+        "per_class_recall": {
+          "Center": 0.8267581475128645,
+          "Donut": 0.66,
+          "Edge-Loc": 0.689922480620155,
+          "Edge-Ring": 0.9816901408450704,
+          "Loc": 0.32276119402985076,
+          "Random": 0.8461538461538461,
+          "Scratch": 0.3492063492063492,
+          "Near-full": 1.0,
+          "None": 0.9930977360574268
+        },
+        "per_class_support": {
+          "Center": 583,
+          "Donut": 100,
+          "Edge-Loc": 774,
+          "Edge-Ring": 1420,
+          "Loc": 536,
+          "Random": 130,
+          "Scratch": 189,
+          "Near-full": 21,
+          "None": 21732
+        },
+        "defect_to_none_count": 460,
+        "true_defect_count": 3753,
+        "defect_to_none_rate": 0.12256861177724487,
+        "confusion_matrix": [
+          [
+            482,
+            1,
+            2,
+            0,
+            22,
+            0,
+            6,
+            0,
+            70
+          ],
+          [
+            15,
+            66,
+            0,
+            0,
+            11,
+            0,
+            6,
+            0,
+            2
+          ],
+          [
+            7,
+            2,
+            534,
+            40,
+            22,
+            5,
+            13,
+            2,
+            149
+          ],
+          [
+            0,
+            0,
+            11,
+            1394,
+            0,
+            0,
+            0,
+            0,
+            15
+          ],
+          [
+            144,
+            6,
+            28,
+            2,
+            173,
+            1,
+            54,
+            1,
+            127
+          ],
+          [
+            7,
+            1,
+            6,
+            0,
+            2,
+            110,
+            0,
+            2,
+            2
+          ],
+          [
+            2,
+            0,
+            2,
+            1,
+            23,
+            0,
+            66,
+            0,
+            95
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            21,
+            0
+          ],
+          [
+            29,
+            0,
+            33,
+            37,
+            27,
+            3,
+            21,
+            0,
+            21582
+          ]
+        ]
+      },
+      "seconds": 3.8196479998878203,
+      "predictions_path": "runs/noise_seed78/clean/predictions.csv",
+      "metrics_path": "runs/noise_seed78/clean/metrics.json"
+    },
+    {
+      "method": "noise",
+      "seed": 78,
+      "condition": "fgsm8",
+      "n": 25485,
+      "scope": "full_test",
+      "metrics": {
+        "n": 25485,
+        "accuracy": 0.8712576025112811,
+        "macro_f1": 0.5027309506543014,
+        "per_class_recall": {
+          "Center": 0.6483704974271012,
+          "Donut": 0.27,
+          "Edge-Loc": 0.4108527131782946,
+          "Edge-Ring": 0.9133802816901408,
+          "Loc": 0.09514925373134328,
+          "Random": 0.4846153846153846,
+          "Scratch": 0.1111111111111111,
+          "Near-full": 0.9047619047619048,
+          "None": 0.9216823117982699
+        },
+        "per_class_support": {
+          "Center": 583,
+          "Donut": 100,
+          "Edge-Loc": 774,
+          "Edge-Ring": 1420,
+          "Loc": 536,
+          "Random": 130,
+          "Scratch": 189,
+          "Near-full": 21,
+          "None": 21732
+        },
+        "defect_to_none_count": 761,
+        "true_defect_count": 3753,
+        "defect_to_none_rate": 0.2027711164401812,
+        "confusion_matrix": [
+          [
+            378,
+            18,
+            5,
+            1,
+            54,
+            1,
+            17,
+            0,
+            109
+          ],
+          [
+            49,
+            27,
+            0,
+            0,
+            13,
+            0,
+            5,
+            0,
+            6
+          ],
+          [
+            13,
+            3,
+            318,
+            80,
+            49,
+            13,
+            41,
+            2,
+            255
+          ],
+          [
+            0,
+            0,
+            49,
+            1297,
+            8,
+            1,
+            1,
+            0,
+            64
+          ],
+          [
+            171,
+            11,
+            51,
+            6,
+            51,
+            1,
+            55,
+            1,
+            189
+          ],
+          [
+            18,
+            5,
+            18,
+            3,
+            4,
+            63,
+            1,
+            7,
+            11
+          ],
+          [
+            12,
+            0,
+            3,
+            3,
+            23,
+            0,
+            21,
+            0,
+            127
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            19,
+            0
+          ],
+          [
+            378,
+            1,
+            369,
+            109,
+            269,
+            4,
+            572,
+            0,
+            20030
+          ]
+        ]
+      },
+      "seconds": 7.870443100284319,
+      "predictions_path": "runs/noise_seed78/fgsm8/predictions.csv",
+      "metrics_path": "runs/noise_seed78/fgsm8/metrics.json"
+    },
+    {
+      "method": "noise",
+      "seed": 78,
+      "condition": "pgd20",
+      "n": 25485,
+      "scope": "full_test",
+      "metrics": {
+        "n": 25485,
+        "accuracy": 0.8374730233470669,
+        "macro_f1": 0.4654532792834574,
+        "per_class_recall": {
+          "Center": 0.5969125214408233,
+          "Donut": 0.23,
+          "Edge-Loc": 0.3359173126614987,
+          "Edge-Ring": 0.902112676056338,
+          "Loc": 0.061567164179104475,
+          "Random": 0.45384615384615384,
+          "Scratch": 0.05291005291005291,
+          "Near-full": 0.9047619047619048,
+          "None": 0.8885514448739187
+        },
+        "per_class_support": {
+          "Center": 583,
+          "Donut": 100,
+          "Edge-Loc": 774,
+          "Edge-Ring": 1420,
+          "Loc": 536,
+          "Random": 130,
+          "Scratch": 189,
+          "Near-full": 21,
+          "None": 21732
+        },
+        "defect_to_none_count": 911,
+        "true_defect_count": 3753,
+        "defect_to_none_rate": 0.24273914201971755,
+        "confusion_matrix": [
+          [
+            348,
+            20,
+            7,
+            1,
+            62,
+            1,
+            12,
+            0,
+            132
+          ],
+          [
+            52,
+            23,
+            0,
+            0,
+            11,
+            0,
+            7,
+            0,
+            7
+          ],
+          [
+            14,
+            4,
+            260,
+            95,
+            48,
+            13,
+            42,
+            2,
+            296
+          ],
+          [
+            1,
+            1,
+            41,
+            1281,
+            6,
+            0,
+            2,
+            0,
+            88
+          ],
+          [
+            158,
+            13,
+            50,
+            7,
+            33,
+            1,
+            46,
+            1,
+            227
+          ],
+          [
+            16,
+            5,
+            18,
+            5,
+            4,
+            59,
+            1,
+            7,
+            15
+          ],
+          [
+            13,
+            0,
+            2,
+            4,
+            14,
+            0,
+            10,
+            0,
+            146
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            19,
+            0
+          ],
+          [
+            533,
+            3,
+            471,
+            120,
+            296,
+            6,
+            993,
+            0,
+            19310
+          ]
+        ]
+      },
+      "seconds": 339.32543440011796,
+      "predictions_path": "runs/noise_seed78/pgd20/predictions.csv",
+      "metrics_path": "runs/noise_seed78/pgd20/metrics.json"
+    },
+    {
+      "method": "noise",
+      "seed": 78,
+      "condition": "pgd50",
+      "n": 25485,
+      "scope": "full_test",
+      "metrics": {
+        "n": 25485,
+        "accuracy": 0.8366490092211104,
+        "macro_f1": 0.46445474069532483,
+        "per_class_recall": {
+          "Center": 0.5951972555746141,
+          "Donut": 0.23,
+          "Edge-Loc": 0.33204134366925064,
+          "Edge-Ring": 0.902112676056338,
+          "Loc": 0.05970149253731343,
+          "Random": 0.45384615384615384,
+          "Scratch": 0.05291005291005291,
+          "Near-full": 0.9047619047619048,
+          "None": 0.8878152033867108
+        },
+        "per_class_support": {
+          "Center": 583,
+          "Donut": 100,
+          "Edge-Loc": 774,
+          "Edge-Ring": 1420,
+          "Loc": 536,
+          "Random": 130,
+          "Scratch": 189,
+          "Near-full": 21,
+          "None": 21732
+        },
+        "defect_to_none_count": 913,
+        "true_defect_count": 3753,
+        "defect_to_none_rate": 0.2432720490274447,
+        "confusion_matrix": [
+          [
+            347,
+            20,
+            7,
+            1,
+            63,
+            1,
+            12,
+            0,
+            132
+          ],
+          [
+            52,
+            23,
+            0,
+            0,
+            11,
+            0,
+            7,
+            0,
+            7
+          ],
+          [
+            14,
+            4,
+            257,
+            97,
+            47,
+            13,
+            42,
+            2,
+            298
+          ],
+          [
+            1,
+            1,
+            41,
+            1281,
+            7,
+            0,
+            2,
+            0,
+            87
+          ],
+          [
+            159,
+            13,
+            50,
+            7,
+            32,
+            1,
+            46,
+            1,
+            227
+          ],
+          [
+            16,
+            5,
+            18,
+            5,
+            4,
+            59,
+            1,
+            7,
+            15
+          ],
+          [
+            13,
+            0,
+            2,
+            4,
+            13,
+            0,
+            10,
+            0,
+            147
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            19,
+            0
+          ],
+          [
+            536,
+            3,
+            473,
+            122,
+            295,
+            6,
+            1003,
+            0,
+            19294
+          ]
+        ]
+      },
+      "seconds": 888.2758632002224,
+      "predictions_path": "runs/noise_seed78/pgd50/predictions.csv",
+      "metrics_path": "runs/noise_seed78/pgd50/metrics.json"
+    },
+    {
+      "method": "noise",
+      "seed": 78,
+      "condition": "targeted_none",
+      "n": 3753,
+      "scope": "full_test_defects",
+      "metrics": {
+        "n": 3753,
+        "accuracy": 0.6474820143884892,
+        "macro_f1": 0.5755672298699507,
+        "per_class_recall": {
+          "Center": 0.7049742710120068,
+          "Donut": 0.42,
+          "Edge-Loc": 0.5090439276485789,
+          "Edge-Ring": 0.9183098591549296,
+          "Loc": 0.27798507462686567,
+          "Random": 0.6923076923076923,
+          "Scratch": 0.1111111111111111,
+          "Near-full": 0.9047619047619048,
+          "None": 0.0
+        },
+        "per_class_support": {
+          "Center": 583,
+          "Donut": 100,
+          "Edge-Loc": 774,
+          "Edge-Ring": 1420,
+          "Loc": 536,
+          "Random": 130,
+          "Scratch": 189,
+          "Near-full": 21,
+          "None": 0
+        },
+        "defect_to_none_count": 1061,
+        "true_defect_count": 3753,
+        "defect_to_none_rate": 0.2827071675992539,
+        "confusion_matrix": [
+          [
+            411,
+            1,
+            0,
+            0,
+            17,
+            0,
+            1,
+            0,
+            153
+          ],
+          [
+            21,
+            42,
+            0,
+            0,
+            24,
+            0,
+            6,
+            0,
+            7
+          ],
+          [
+            3,
+            1,
+            394,
+            12,
+            13,
+            5,
+            3,
+            1,
+            342
+          ],
+          [
+            0,
+            0,
+            17,
+            1304,
+            0,
+            0,
+            0,
+            0,
+            99
+          ],
+          [
+            74,
+            0,
+            16,
+            1,
+            149,
+            1,
+            25,
+            1,
+            269
+          ],
+          [
+            5,
+            1,
+            5,
+            1,
+            1,
+            90,
+            0,
+            1,
+            26
+          ],
+          [
+            1,
+            0,
+            1,
+            0,
+            1,
+            0,
+            21,
+            0,
+            165
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            19,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "target_class": "None",
+        "target_class_id": 8,
+        "target_success_count": 1061,
+        "target_success_denominator": 3753,
+        "target_success_rate": 0.2827071675992539,
+        "clean_correct_defect_success_count": 412,
+        "clean_correct_defect_denominator": 2846,
+        "clean_correct_defect_success_rate": 0.14476458186929023,
+        "baseline_clean_defect_to_none_count": 460,
+        "baseline_clean_defect_to_none_rate": 0.12256861177724487,
+        "new_target_success_count": 601
+      },
+      "seconds": 48.71577079995768,
+      "predictions_path": "runs/noise_seed78/targeted_none/predictions.csv",
+      "metrics_path": "runs/noise_seed78/targeted_none/metrics.json"
+    },
+    {
+      "method": "noise",
+      "seed": 79,
+      "condition": "clean",
+      "n": 25485,
+      "scope": "full_test",
+      "metrics": {
+        "n": 25485,
+        "accuracy": 0.9567981165391407,
+        "macro_f1": 0.780270287305993,
+        "per_class_recall": {
+          "Center": 0.6998284734133791,
+          "Donut": 0.82,
+          "Edge-Loc": 0.8036175710594315,
+          "Edge-Ring": 0.969718309859155,
+          "Loc": 0.5876865671641791,
+          "Random": 0.9076923076923077,
+          "Scratch": 0.3862433862433862,
+          "Near-full": 0.8571428571428571,
+          "None": 0.9833885514448739
+        },
+        "per_class_support": {
+          "Center": 583,
+          "Donut": 100,
+          "Edge-Loc": 774,
+          "Edge-Ring": 1420,
+          "Loc": 536,
+          "Random": 130,
+          "Scratch": 189,
+          "Near-full": 21,
+          "None": 21732
+        },
+        "defect_to_none_count": 337,
+        "true_defect_count": 3753,
+        "defect_to_none_rate": 0.08979483080202505,
+        "confusion_matrix": [
+          [
+            408,
+            10,
+            6,
+            0,
+            82,
+            2,
+            5,
+            0,
+            70
+          ],
+          [
+            0,
+            82,
+            0,
+            0,
+            9,
+            0,
+            9,
+            0,
+            0
+          ],
+          [
+            3,
+            1,
+            622,
+            17,
+            21,
+            5,
+            12,
+            0,
+            93
+          ],
+          [
+            0,
+            0,
+            37,
+            1377,
+            0,
+            0,
+            0,
+            0,
+            6
+          ],
+          [
+            15,
+            19,
+            55,
+            1,
+            315,
+            2,
+            31,
+            0,
+            98
+          ],
+          [
+            0,
+            1,
+            3,
+            0,
+            5,
+            118,
+            0,
+            1,
+            2
+          ],
+          [
+            1,
+            0,
+            7,
+            0,
+            40,
+            0,
+            73,
+            0,
+            68
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            2,
+            0,
+            18,
+            0
+          ],
+          [
+            7,
+            0,
+            165,
+            42,
+            87,
+            6,
+            54,
+            0,
+            21371
+          ]
+        ]
+      },
+      "seconds": 3.8936799991934095,
+      "predictions_path": "runs/noise_seed79/clean/predictions.csv",
+      "metrics_path": "runs/noise_seed79/clean/metrics.json"
+    },
+    {
+      "method": "noise",
+      "seed": 79,
+      "condition": "fgsm8",
+      "n": 25485,
+      "scope": "full_test",
+      "metrics": {
+        "n": 25485,
+        "accuracy": 0.7588385324700805,
+        "macro_f1": 0.4757473148102688,
+        "per_class_recall": {
+          "Center": 0.38593481989708406,
+          "Donut": 0.51,
+          "Edge-Loc": 0.5077519379844961,
+          "Edge-Ring": 0.9028169014084507,
+          "Loc": 0.1828358208955224,
+          "Random": 0.6076923076923076,
+          "Scratch": 0.07407407407407407,
+          "Near-full": 0.6666666666666666,
+          "None": 0.7906773421682312
+        },
+        "per_class_support": {
+          "Center": 583,
+          "Donut": 100,
+          "Edge-Loc": 774,
+          "Edge-Ring": 1420,
+          "Loc": 536,
+          "Random": 130,
+          "Scratch": 189,
+          "Near-full": 21,
+          "None": 21732
+        },
+        "defect_to_none_count": 595,
+        "true_defect_count": 3753,
+        "defect_to_none_rate": 0.1585398347988276,
+        "confusion_matrix": [
+          [
+            225,
+            32,
+            41,
+            0,
+            163,
+            7,
+            18,
+            0,
+            97
+          ],
+          [
+            5,
+            51,
+            0,
+            0,
+            33,
+            1,
+            7,
+            0,
+            3
+          ],
+          [
+            8,
+            8,
+            393,
+            60,
+            49,
+            15,
+            59,
+            1,
+            181
+          ],
+          [
+            0,
+            0,
+            77,
+            1282,
+            4,
+            2,
+            23,
+            0,
+            32
+          ],
+          [
+            73,
+            44,
+            86,
+            3,
+            98,
+            4,
+            68,
+            1,
+            159
+          ],
+          [
+            2,
+            5,
+            20,
+            0,
+            7,
+            79,
+            2,
+            3,
+            12
+          ],
+          [
+            3,
+            0,
+            6,
+            4,
+            51,
+            0,
+            14,
+            0,
+            111
+          ],
+          [
+            0,
+            0,
+            4,
+            0,
+            0,
+            3,
+            0,
+            14,
+            0
+          ],
+          [
+            156,
+            5,
+            1638,
+            113,
+            1510,
+            13,
+            1114,
+            0,
+            17183
+          ]
+        ]
+      },
+      "seconds": 7.77927099991939,
+      "predictions_path": "runs/noise_seed79/fgsm8/predictions.csv",
+      "metrics_path": "runs/noise_seed79/fgsm8/metrics.json"
+    },
+    {
+      "method": "noise",
+      "seed": 79,
+      "condition": "pgd20",
+      "n": 25485,
+      "scope": "full_test",
+      "metrics": {
+        "n": 25485,
+        "accuracy": 0.6257406317441633,
+        "macro_f1": 0.42231792109912525,
+        "per_class_recall": {
+          "Center": 0.3344768439108062,
+          "Donut": 0.41,
+          "Edge-Loc": 0.4186046511627907,
+          "Edge-Ring": 0.8866197183098592,
+          "Loc": 0.08582089552238806,
+          "Random": 0.5692307692307692,
+          "Scratch": 0.037037037037037035,
+          "Near-full": 0.6666666666666666,
+          "None": 0.6436131050984722
+        },
+        "per_class_support": {
+          "Center": 583,
+          "Donut": 100,
+          "Edge-Loc": 774,
+          "Edge-Ring": 1420,
+          "Loc": 536,
+          "Random": 130,
+          "Scratch": 189,
+          "Near-full": 21,
+          "None": 21732
+        },
+        "defect_to_none_count": 736,
+        "true_defect_count": 3753,
+        "defect_to_none_rate": 0.1961097788435918,
+        "confusion_matrix": [
+          [
+            195,
+            40,
+            55,
+            0,
+            146,
+            8,
+            27,
+            0,
+            112
+          ],
+          [
+            8,
+            41,
+            1,
+            0,
+            36,
+            1,
+            6,
+            0,
+            7
+          ],
+          [
+            9,
+            8,
+            324,
+            66,
+            44,
+            17,
+            75,
+            1,
+            230
+          ],
+          [
+            0,
+            3,
+            73,
+            1259,
+            1,
+            3,
+            37,
+            0,
+            44
+          ],
+          [
+            81,
+            50,
+            86,
+            3,
+            46,
+            4,
+            65,
+            1,
+            200
+          ],
+          [
+            3,
+            5,
+            20,
+            3,
+            6,
+            74,
+            3,
+            3,
+            13
+          ],
+          [
+            5,
+            0,
+            4,
+            4,
+            39,
+            0,
+            7,
+            0,
+            130
+          ],
+          [
+            0,
+            0,
+            4,
+            0,
+            0,
+            3,
+            0,
+            14,
+            0
+          ],
+          [
+            256,
+            8,
+            2086,
+            127,
+            2292,
+            18,
+            2958,
+            0,
+            13987
+          ]
+        ]
+      },
+      "seconds": 339.59405940014403,
+      "predictions_path": "runs/noise_seed79/pgd20/predictions.csv",
+      "metrics_path": "runs/noise_seed79/pgd20/metrics.json"
+    },
+    {
+      "method": "noise",
+      "seed": 79,
+      "condition": "pgd50",
+      "n": 25485,
+      "scope": "full_test",
+      "metrics": {
+        "n": 25485,
+        "accuracy": 0.6153815970178537,
+        "macro_f1": 0.4195595644682779,
+        "per_class_recall": {
+          "Center": 0.33276157804459694,
+          "Donut": 0.41,
+          "Edge-Loc": 0.4160206718346253,
+          "Edge-Ring": 0.8852112676056338,
+          "Loc": 0.08395522388059702,
+          "Random": 0.5692307692307692,
+          "Scratch": 0.037037037037037035,
+          "Near-full": 0.6666666666666666,
+          "None": 0.6317412111172465
+        },
+        "per_class_support": {
+          "Center": 583,
+          "Donut": 100,
+          "Edge-Loc": 774,
+          "Edge-Ring": 1420,
+          "Loc": 536,
+          "Random": 130,
+          "Scratch": 189,
+          "Near-full": 21,
+          "None": 21732
+        },
+        "defect_to_none_count": 741,
+        "true_defect_count": 3753,
+        "defect_to_none_rate": 0.19744204636290968,
+        "confusion_matrix": [
+          [
+            194,
+            41,
+            55,
+            0,
+            145,
+            8,
+            27,
+            0,
+            113
+          ],
+          [
+            8,
+            41,
+            1,
+            0,
+            35,
+            2,
+            6,
+            0,
+            7
+          ],
+          [
+            9,
+            8,
+            322,
+            67,
+            43,
+            18,
+            76,
+            1,
+            230
+          ],
+          [
+            0,
+            3,
+            71,
+            1257,
+            1,
+            4,
+            39,
+            0,
+            45
+          ],
+          [
+            82,
+            50,
+            86,
+            3,
+            45,
+            4,
+            63,
+            1,
+            202
+          ],
+          [
+            3,
+            5,
+            20,
+            3,
+            6,
+            74,
+            3,
+            3,
+            13
+          ],
+          [
+            5,
+            0,
+            4,
+            4,
+            38,
+            0,
+            7,
+            0,
+            131
+          ],
+          [
+            0,
+            0,
+            4,
+            0,
+            0,
+            3,
+            0,
+            14,
+            0
+          ],
+          [
+            261,
+            8,
+            2113,
+            127,
+            2354,
+            18,
+            3122,
+            0,
+            13729
+          ]
+        ]
+      },
+      "seconds": 1145.0494862998894,
+      "predictions_path": "runs/noise_seed79/pgd50/predictions.csv",
+      "metrics_path": "runs/noise_seed79/pgd50/metrics.json"
+    },
+    {
+      "method": "noise",
+      "seed": 79,
+      "condition": "targeted_none",
+      "n": 3753,
+      "scope": "full_test_defects",
+      "metrics": {
+        "n": 3753,
+        "accuracy": 0.6679989341859845,
+        "macro_f1": 0.600460115493314,
+        "per_class_recall": {
+          "Center": 0.5797598627787307,
+          "Donut": 0.66,
+          "Edge-Loc": 0.5917312661498708,
+          "Edge-Ring": 0.9119718309859155,
+          "Loc": 0.4141791044776119,
+          "Random": 0.7461538461538462,
+          "Scratch": 0.08465608465608465,
+          "Near-full": 0.7142857142857143,
+          "None": 0.0
+        },
+        "per_class_support": {
+          "Center": 583,
+          "Donut": 100,
+          "Edge-Loc": 774,
+          "Edge-Ring": 1420,
+          "Loc": 536,
+          "Random": 130,
+          "Scratch": 189,
+          "Near-full": 21,
+          "None": 0
+        },
+        "defect_to_none_count": 999,
+        "true_defect_count": 3753,
+        "defect_to_none_rate": 0.26618705035971224,
+        "confusion_matrix": [
+          [
+            338,
+            8,
+            1,
+            0,
+            65,
+            3,
+            1,
+            0,
+            167
+          ],
+          [
+            1,
+            66,
+            0,
+            0,
+            21,
+            1,
+            4,
+            0,
+            7
+          ],
+          [
+            2,
+            1,
+            458,
+            3,
+            11,
+            4,
+            1,
+            0,
+            294
+          ],
+          [
+            0,
+            0,
+            40,
+            1295,
+            0,
+            0,
+            0,
+            0,
+            85
+          ],
+          [
+            7,
+            5,
+            30,
+            0,
+            222,
+            2,
+            15,
+            0,
+            255
+          ],
+          [
+            0,
+            1,
+            4,
+            0,
+            3,
+            97,
+            0,
+            0,
+            25
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            6,
+            0,
+            16,
+            0,
+            166
+          ],
+          [
+            0,
+            0,
+            3,
+            0,
+            0,
+            3,
+            0,
+            15,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "target_class": "None",
+        "target_class_id": 8,
+        "target_success_count": 999,
+        "target_success_denominator": 3753,
+        "target_success_rate": 0.26618705035971224,
+        "clean_correct_defect_success_count": 488,
+        "clean_correct_defect_denominator": 3013,
+        "clean_correct_defect_success_rate": 0.161964819117159,
+        "baseline_clean_defect_to_none_count": 337,
+        "baseline_clean_defect_to_none_rate": 0.08979483080202505,
+        "new_target_success_count": 662
+      },
+      "seconds": 50.547432499879505,
+      "predictions_path": "runs/noise_seed79/targeted_none/predictions.csv",
+      "metrics_path": "runs/noise_seed79/targeted_none/metrics.json"
+    },
+    {
+      "method": "pgd",
+      "seed": 77,
+      "condition": "clean",
+      "n": 25485,
+      "scope": "full_test",
+      "metrics": {
+        "n": 25485,
+        "accuracy": 0.9576613694329998,
+        "macro_f1": 0.7528839877152538,
+        "per_class_recall": {
+          "Center": 0.7392795883361921,
+          "Donut": 0.88,
+          "Edge-Loc": 0.7080103359173127,
+          "Edge-Ring": 0.9795774647887324,
+          "Loc": 0.4869402985074627,
+          "Random": 0.7846153846153846,
+          "Scratch": 0.12698412698412698,
+          "Near-full": 1.0,
+          "None": 0.9911651021535064
+        },
+        "per_class_support": {
+          "Center": 583,
+          "Donut": 100,
+          "Edge-Loc": 774,
+          "Edge-Ring": 1420,
+          "Loc": 536,
+          "Random": 130,
+          "Scratch": 189,
+          "Near-full": 21,
+          "None": 21732
+        },
+        "defect_to_none_count": 543,
+        "true_defect_count": 3753,
+        "defect_to_none_rate": 0.14468425259792167,
+        "confusion_matrix": [
+          [
+            431,
+            18,
+            3,
+            0,
+            45,
+            0,
+            0,
+            0,
+            86
+          ],
+          [
+            1,
+            88,
+            0,
+            0,
+            4,
+            0,
+            3,
+            0,
+            4
+          ],
+          [
+            4,
+            1,
+            548,
+            38,
+            22,
+            3,
+            1,
+            0,
+            157
+          ],
+          [
+            0,
+            0,
+            14,
+            1391,
+            0,
+            0,
+            0,
+            0,
+            15
+          ],
+          [
+            44,
+            32,
+            35,
+            3,
+            261,
+            1,
+            17,
+            0,
+            143
+          ],
+          [
+            2,
+            4,
+            7,
+            2,
+            7,
+            102,
+            2,
+            2,
+            2
+          ],
+          [
+            1,
+            0,
+            2,
+            0,
+            26,
+            0,
+            24,
+            0,
+            136
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            21,
+            0
+          ],
+          [
+            11,
+            1,
+            63,
+            51,
+            50,
+            1,
+            15,
+            0,
+            21540
+          ]
+        ]
+      },
+      "seconds": 3.9870572997024283,
+      "predictions_path": "runs/pgd_seed77/clean/predictions.csv",
+      "metrics_path": "runs/pgd_seed77/clean/metrics.json"
+    },
+    {
+      "method": "pgd",
+      "seed": 77,
+      "condition": "fgsm8",
+      "n": 25485,
+      "scope": "full_test",
+      "metrics": {
+        "n": 25485,
+        "accuracy": 0.9343535412988032,
+        "macro_f1": 0.646972242331211,
+        "per_class_recall": {
+          "Center": 0.6689536878216124,
+          "Donut": 0.79,
+          "Edge-Loc": 0.5736434108527132,
+          "Edge-Ring": 0.9535211267605633,
+          "Loc": 0.291044776119403,
+          "Random": 0.6384615384615384,
+          "Scratch": 0.047619047619047616,
+          "Near-full": 0.8571428571428571,
+          "None": 0.9791551628934291
+        },
+        "per_class_support": {
+          "Center": 583,
+          "Donut": 100,
+          "Edge-Loc": 774,
+          "Edge-Ring": 1420,
+          "Loc": 536,
+          "Random": 130,
+          "Scratch": 189,
+          "Near-full": 21,
+          "None": 21732
+        },
+        "defect_to_none_count": 694,
+        "true_defect_count": 3753,
+        "defect_to_none_rate": 0.1849187316813216,
+        "confusion_matrix": [
+          [
+            390,
+            21,
+            3,
+            0,
+            67,
+            1,
+            1,
+            0,
+            100
+          ],
+          [
+            2,
+            79,
+            0,
+            0,
+            9,
+            0,
+            6,
+            0,
+            4
+          ],
+          [
+            5,
+            4,
+            444,
+            60,
+            40,
+            3,
+            3,
+            0,
+            215
+          ],
+          [
+            0,
+            0,
+            29,
+            1354,
+            2,
+            0,
+            1,
+            0,
+            34
+          ],
+          [
+            74,
+            46,
+            47,
+            4,
+            156,
+            1,
+            20,
+            1,
+            187
+          ],
+          [
+            2,
+            8,
+            12,
+            3,
+            13,
+            83,
+            3,
+            2,
+            4
+          ],
+          [
+            1,
+            0,
+            2,
+            0,
+            27,
+            0,
+            9,
+            0,
+            150
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            2,
+            0,
+            18,
+            0
+          ],
+          [
+            32,
+            4,
+            128,
+            85,
+            117,
+            1,
+            86,
+            0,
+            21279
+          ]
+        ]
+      },
+      "seconds": 7.490454299724661,
+      "predictions_path": "runs/pgd_seed77/fgsm8/predictions.csv",
+      "metrics_path": "runs/pgd_seed77/fgsm8/metrics.json"
+    },
+    {
+      "method": "pgd",
+      "seed": 77,
+      "condition": "pgd20",
+      "n": 25485,
+      "scope": "full_test",
+      "metrics": {
+        "n": 25485,
+        "accuracy": 0.9301549931332156,
+        "macro_f1": 0.632396353564088,
+        "per_class_recall": {
+          "Center": 0.6552315608919382,
+          "Donut": 0.79,
+          "Edge-Loc": 0.5490956072351422,
+          "Edge-Ring": 0.9514084507042253,
+          "Loc": 0.251865671641791,
+          "Random": 0.6230769230769231,
+          "Scratch": 0.031746031746031744,
+          "Near-full": 0.8571428571428571,
+          "None": 0.9768083931529542
+        },
+        "per_class_support": {
+          "Center": 583,
+          "Donut": 100,
+          "Edge-Loc": 774,
+          "Edge-Ring": 1420,
+          "Loc": 536,
+          "Random": 130,
+          "Scratch": 189,
+          "Near-full": 21,
+          "None": 21732
+        },
+        "defect_to_none_count": 739,
+        "true_defect_count": 3753,
+        "defect_to_none_rate": 0.19690913935518253,
+        "confusion_matrix": [
+          [
+            382,
+            22,
+            3,
+            0,
+            73,
+            1,
+            1,
+            0,
+            101
+          ],
+          [
+            2,
+            79,
+            0,
+            0,
+            9,
+            0,
+            6,
+            0,
+            4
+          ],
+          [
+            5,
+            5,
+            425,
+            63,
+            41,
+            4,
+            3,
+            0,
+            228
+          ],
+          [
+            0,
+            0,
+            27,
+            1351,
+            2,
+            0,
+            1,
+            0,
+            39
+          ],
+          [
+            77,
+            48,
+            49,
+            4,
+            135,
+            1,
+            16,
+            1,
+            205
+          ],
+          [
+            3,
+            6,
+            11,
+            3,
+            13,
+            81,
+            3,
+            2,
+            8
+          ],
+          [
+            1,
+            0,
+            1,
+            0,
+            27,
+            0,
+            6,
+            0,
+            154
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            2,
+            0,
+            18,
+            0
+          ],
+          [
+            37,
+            7,
+            133,
+            90,
+            134,
+            1,
+            102,
+            0,
+            21228
+          ]
+        ]
+      },
+      "seconds": 339.5559902995883,
+      "predictions_path": "runs/pgd_seed77/pgd20/predictions.csv",
+      "metrics_path": "runs/pgd_seed77/pgd20/metrics.json"
+    },
+    {
+      "method": "pgd",
+      "seed": 77,
+      "condition": "pgd50",
+      "n": 25485,
+      "scope": "full_test",
+      "metrics": {
+        "n": 25485,
+        "accuracy": 0.9301549931332156,
+        "macro_f1": 0.6323578081785897,
+        "per_class_recall": {
+          "Center": 0.6552315608919382,
+          "Donut": 0.79,
+          "Edge-Loc": 0.5490956072351422,
+          "Edge-Ring": 0.9514084507042253,
+          "Loc": 0.251865671641791,
+          "Random": 0.6230769230769231,
+          "Scratch": 0.031746031746031744,
+          "Near-full": 0.8571428571428571,
+          "None": 0.9768083931529542
+        },
+        "per_class_support": {
+          "Center": 583,
+          "Donut": 100,
+          "Edge-Loc": 774,
+          "Edge-Ring": 1420,
+          "Loc": 536,
+          "Random": 130,
+          "Scratch": 189,
+          "Near-full": 21,
+          "None": 21732
+        },
+        "defect_to_none_count": 739,
+        "true_defect_count": 3753,
+        "defect_to_none_rate": 0.19690913935518253,
+        "confusion_matrix": [
+          [
+            382,
+            22,
+            3,
+            0,
+            73,
+            1,
+            1,
+            0,
+            101
+          ],
+          [
+            2,
+            79,
+            0,
+            0,
+            9,
+            0,
+            6,
+            0,
+            4
+          ],
+          [
+            5,
+            5,
+            425,
+            63,
+            41,
+            4,
+            3,
+            0,
+            228
+          ],
+          [
+            0,
+            0,
+            27,
+            1351,
+            2,
+            0,
+            1,
+            0,
+            39
+          ],
+          [
+            77,
+            48,
+            49,
+            4,
+            135,
+            1,
+            16,
+            1,
+            205
+          ],
+          [
+            3,
+            6,
+            11,
+            3,
+            13,
+            81,
+            3,
+            2,
+            8
+          ],
+          [
+            1,
+            0,
+            1,
+            0,
+            27,
+            0,
+            6,
+            0,
+            154
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            2,
+            0,
+            18,
+            0
+          ],
+          [
+            37,
+            7,
+            133,
+            90,
+            136,
+            1,
+            100,
+            0,
+            21228
+          ]
+        ]
+      },
+      "seconds": 845.3382405999873,
+      "predictions_path": "runs/pgd_seed77/pgd50/predictions.csv",
+      "metrics_path": "runs/pgd_seed77/pgd50/metrics.json"
+    },
+    {
+      "method": "pgd",
+      "seed": 77,
+      "condition": "targeted_none",
+      "n": 3753,
+      "scope": "full_test_defects",
+      "metrics": {
+        "n": 3753,
+        "accuracy": 0.7180921929123368,
+        "macro_f1": 0.6181998902076588,
+        "per_class_recall": {
+          "Center": 0.7152658662092625,
+          "Donut": 0.79,
+          "Edge-Loc": 0.6343669250645995,
+          "Edge-Ring": 0.9570422535211267,
+          "Loc": 0.43097014925373134,
+          "Random": 0.6923076923076923,
+          "Scratch": 0.05291005291005291,
+          "Near-full": 0.8571428571428571,
+          "None": 0.0
+        },
+        "per_class_support": {
+          "Center": 583,
+          "Donut": 100,
+          "Edge-Loc": 774,
+          "Edge-Ring": 1420,
+          "Loc": 536,
+          "Random": 130,
+          "Scratch": 189,
+          "Near-full": 21,
+          "None": 0
+        },
+        "defect_to_none_count": 788,
+        "true_defect_count": 3753,
+        "defect_to_none_rate": 0.20996536104449773,
+        "confusion_matrix": [
+          [
+            417,
+            11,
+            1,
+            0,
+            44,
+            0,
+            0,
+            0,
+            110
+          ],
+          [
+            1,
+            79,
+            0,
+            0,
+            10,
+            0,
+            6,
+            0,
+            4
+          ],
+          [
+            4,
+            1,
+            491,
+            14,
+            18,
+            2,
+            0,
+            0,
+            244
+          ],
+          [
+            0,
+            0,
+            18,
+            1359,
+            2,
+            0,
+            0,
+            0,
+            41
+          ],
+          [
+            29,
+            19,
+            32,
+            0,
+            231,
+            1,
+            8,
+            0,
+            216
+          ],
+          [
+            0,
+            3,
+            7,
+            1,
+            11,
+            90,
+            3,
+            2,
+            13
+          ],
+          [
+            1,
+            0,
+            1,
+            0,
+            17,
+            0,
+            10,
+            0,
+            160
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            2,
+            0,
+            18,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "target_class": "None",
+        "target_class_id": 8,
+        "target_success_count": 788,
+        "target_success_denominator": 3753,
+        "target_success_rate": 0.20996536104449773,
+        "clean_correct_defect_success_count": 179,
+        "clean_correct_defect_denominator": 2866,
+        "clean_correct_defect_success_rate": 0.06245638520586183,
+        "baseline_clean_defect_to_none_count": 543,
+        "baseline_clean_defect_to_none_rate": 0.14468425259792167,
+        "new_target_success_count": 245
+      },
+      "seconds": 50.91710019990569,
+      "predictions_path": "runs/pgd_seed77/targeted_none/predictions.csv",
+      "metrics_path": "runs/pgd_seed77/targeted_none/metrics.json"
+    },
+    {
+      "method": "pgd",
+      "seed": 78,
+      "condition": "clean",
+      "n": 25485,
+      "scope": "full_test",
+      "metrics": {
+        "n": 25485,
+        "accuracy": 0.9545615067686875,
+        "macro_f1": 0.7255754900701247,
+        "per_class_recall": {
+          "Center": 0.7804459691252144,
+          "Donut": 0.72,
+          "Edge-Loc": 0.7467700258397932,
+          "Edge-Ring": 0.9873239436619718,
+          "Loc": 0.4869402985074627,
+          "Random": 0.8846153846153846,
+          "Scratch": 0.047619047619047616,
+          "Near-full": 0.9523809523809523,
+          "None": 0.9854132155346954
+        },
+        "per_class_support": {
+          "Center": 583,
+          "Donut": 100,
+          "Edge-Loc": 774,
+          "Edge-Ring": 1420,
+          "Loc": 536,
+          "Random": 130,
+          "Scratch": 189,
+          "Near-full": 21,
+          "None": 21732
+        },
+        "defect_to_none_count": 432,
+        "true_defect_count": 3753,
+        "defect_to_none_rate": 0.11510791366906475,
+        "confusion_matrix": [
+          [
+            455,
+            7,
+            2,
+            0,
+            39,
+            1,
+            6,
+            0,
+            73
+          ],
+          [
+            8,
+            72,
+            0,
+            0,
+            16,
+            0,
+            0,
+            0,
+            4
+          ],
+          [
+            6,
+            1,
+            578,
+            44,
+            24,
+            12,
+            3,
+            1,
+            105
+          ],
+          [
+            0,
+            0,
+            10,
+            1402,
+            0,
+            0,
+            0,
+            0,
+            8
+          ],
+          [
+            86,
+            12,
+            36,
+            4,
+            261,
+            1,
+            13,
+            1,
+            122
+          ],
+          [
+            3,
+            2,
+            3,
+            0,
+            4,
+            115,
+            0,
+            2,
+            1
+          ],
+          [
+            7,
+            0,
+            7,
+            0,
+            47,
+            0,
+            9,
+            0,
+            119
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            20,
+            0
+          ],
+          [
+            28,
+            1,
+            133,
+            60,
+            75,
+            14,
+            6,
+            0,
+            21415
+          ]
+        ]
+      },
+      "seconds": 3.533756800403353,
+      "predictions_path": "runs/pgd_seed78/clean/predictions.csv",
+      "metrics_path": "runs/pgd_seed78/clean/metrics.json"
+    },
+    {
+      "method": "pgd",
+      "seed": 78,
+      "condition": "fgsm8",
+      "n": 25485,
+      "scope": "full_test",
+      "metrics": {
+        "n": 25485,
+        "accuracy": 0.9250147145379635,
+        "macro_f1": 0.633608635781355,
+        "per_class_recall": {
+          "Center": 0.7272727272727273,
+          "Donut": 0.57,
+          "Edge-Loc": 0.603359173126615,
+          "Edge-Ring": 0.9605633802816902,
+          "Loc": 0.30223880597014924,
+          "Random": 0.8307692307692308,
+          "Scratch": 0.010582010582010581,
+          "Near-full": 0.9047619047619048,
+          "None": 0.9649825142646788
+        },
+        "per_class_support": {
+          "Center": 583,
+          "Donut": 100,
+          "Edge-Loc": 774,
+          "Edge-Ring": 1420,
+          "Loc": 536,
+          "Random": 130,
+          "Scratch": 189,
+          "Near-full": 21,
+          "None": 21732
+        },
+        "defect_to_none_count": 580,
+        "true_defect_count": 3753,
+        "defect_to_none_rate": 0.15454303224087396,
+        "confusion_matrix": [
+          [
+            424,
+            10,
+            6,
+            1,
+            49,
+            3,
+            4,
+            0,
+            86
+          ],
+          [
+            13,
+            57,
+            0,
+            0,
+            25,
+            1,
+            0,
+            0,
+            4
+          ],
+          [
+            8,
+            1,
+            467,
+            78,
+            39,
+            15,
+            3,
+            1,
+            162
+          ],
+          [
+            0,
+            0,
+            31,
+            1364,
+            0,
+            0,
+            1,
+            0,
+            24
+          ],
+          [
+            107,
+            19,
+            60,
+            8,
+            162,
+            1,
+            11,
+            1,
+            167
+          ],
+          [
+            3,
+            2,
+            5,
+            2,
+            3,
+            108,
+            0,
+            2,
+            5
+          ],
+          [
+            10,
+            0,
+            6,
+            2,
+            37,
+            0,
+            2,
+            0,
+            132
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            19,
+            0
+          ],
+          [
+            68,
+            2,
+            302,
+            121,
+            218,
+            17,
+            33,
+            0,
+            20971
+          ]
+        ]
+      },
+      "seconds": 7.482302600488765,
+      "predictions_path": "runs/pgd_seed78/fgsm8/predictions.csv",
+      "metrics_path": "runs/pgd_seed78/fgsm8/metrics.json"
+    },
+    {
+      "method": "pgd",
+      "seed": 78,
+      "condition": "pgd20",
+      "n": 25485,
+      "scope": "full_test",
+      "metrics": {
+        "n": 25485,
+        "accuracy": 0.9190896605846577,
+        "macro_f1": 0.6178328854514327,
+        "per_class_recall": {
+          "Center": 0.7152658662092625,
+          "Donut": 0.55,
+          "Edge-Loc": 0.582687338501292,
+          "Edge-Ring": 0.9584507042253522,
+          "Loc": 0.2667910447761194,
+          "Random": 0.8153846153846154,
+          "Scratch": 0.010582010582010581,
+          "Near-full": 0.9047619047619048,
+          "None": 0.9602889747837291
+        },
+        "per_class_support": {
+          "Center": 583,
+          "Donut": 100,
+          "Edge-Loc": 774,
+          "Edge-Ring": 1420,
+          "Loc": 536,
+          "Random": 130,
+          "Scratch": 189,
+          "Near-full": 21,
+          "None": 21732
+        },
+        "defect_to_none_count": 612,
+        "true_defect_count": 3753,
+        "defect_to_none_rate": 0.1630695443645084,
+        "confusion_matrix": [
+          [
+            417,
+            12,
+            7,
+            1,
+            49,
+            3,
+            4,
+            0,
+            90
+          ],
+          [
+            13,
+            55,
+            0,
+            0,
+            27,
+            1,
+            0,
+            0,
+            4
+          ],
+          [
+            8,
+            2,
+            451,
+            79,
+            41,
+            18,
+            2,
+            1,
+            172
+          ],
+          [
+            0,
+            0,
+            32,
+            1361,
+            0,
+            0,
+            1,
+            0,
+            26
+          ],
+          [
+            110,
+            22,
+            60,
+            9,
+            143,
+            1,
+            12,
+            1,
+            178
+          ],
+          [
+            6,
+            2,
+            5,
+            2,
+            2,
+            106,
+            0,
+            2,
+            5
+          ],
+          [
+            8,
+            0,
+            3,
+            4,
+            35,
+            0,
+            2,
+            0,
+            137
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            19,
+            0
+          ],
+          [
+            83,
+            2,
+            330,
+            130,
+            264,
+            17,
+            37,
+            0,
+            20869
+          ]
+        ]
+      },
+      "seconds": 336.9813550998224,
+      "predictions_path": "runs/pgd_seed78/pgd20/predictions.csv",
+      "metrics_path": "runs/pgd_seed78/pgd20/metrics.json"
+    },
+    {
+      "method": "pgd",
+      "seed": 78,
+      "condition": "pgd50",
+      "n": 25485,
+      "scope": "full_test",
+      "metrics": {
+        "n": 25485,
+        "accuracy": 0.9189719442809495,
+        "macro_f1": 0.6176723941833949,
+        "per_class_recall": {
+          "Center": 0.7152658662092625,
+          "Donut": 0.55,
+          "Edge-Loc": 0.582687338501292,
+          "Edge-Ring": 0.9577464788732394,
+          "Loc": 0.2667910447761194,
+          "Random": 0.8153846153846154,
+          "Scratch": 0.010582010582010581,
+          "Near-full": 0.9047619047619048,
+          "None": 0.9601969445978281
+        },
+        "per_class_support": {
+          "Center": 583,
+          "Donut": 100,
+          "Edge-Loc": 774,
+          "Edge-Ring": 1420,
+          "Loc": 536,
+          "Random": 130,
+          "Scratch": 189,
+          "Near-full": 21,
+          "None": 21732
+        },
+        "defect_to_none_count": 612,
+        "true_defect_count": 3753,
+        "defect_to_none_rate": 0.1630695443645084,
+        "confusion_matrix": [
+          [
+            417,
+            12,
+            7,
+            1,
+            48,
+            3,
+            5,
+            0,
+            90
+          ],
+          [
+            13,
+            55,
+            0,
+            0,
+            27,
+            1,
+            0,
+            0,
+            4
+          ],
+          [
+            8,
+            2,
+            451,
+            79,
+            41,
+            18,
+            2,
+            1,
+            172
+          ],
+          [
+            0,
+            0,
+            33,
+            1360,
+            0,
+            0,
+            1,
+            0,
+            26
+          ],
+          [
+            110,
+            22,
+            60,
+            9,
+            143,
+            1,
+            12,
+            1,
+            178
+          ],
+          [
+            6,
+            2,
+            5,
+            2,
+            2,
+            106,
+            0,
+            2,
+            5
+          ],
+          [
+            8,
+            0,
+            3,
+            4,
+            35,
+            0,
+            2,
+            0,
+            137
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            19,
+            0
+          ],
+          [
+            84,
+            2,
+            331,
+            130,
+            264,
+            17,
+            37,
+            0,
+            20867
+          ]
+        ]
+      },
+      "seconds": 835.6506499000825,
+      "predictions_path": "runs/pgd_seed78/pgd50/predictions.csv",
+      "metrics_path": "runs/pgd_seed78/pgd50/metrics.json"
+    },
+    {
+      "method": "pgd",
+      "seed": 78,
+      "condition": "targeted_none",
+      "n": 3753,
+      "scope": "full_test_defects",
+      "metrics": {
+        "n": 3753,
+        "accuracy": 0.7391420197175593,
+        "macro_f1": 0.6186641300031321,
+        "per_class_recall": {
+          "Center": 0.7530017152658662,
+          "Donut": 0.62,
+          "Edge-Loc": 0.686046511627907,
+          "Edge-Ring": 0.9669014084507043,
+          "Loc": 0.44029850746268656,
+          "Random": 0.8384615384615385,
+          "Scratch": 0.026455026455026454,
+          "Near-full": 0.9047619047619048,
+          "None": 0.0
+        },
+        "per_class_support": {
+          "Center": 583,
+          "Donut": 100,
+          "Edge-Loc": 774,
+          "Edge-Ring": 1420,
+          "Loc": 536,
+          "Random": 130,
+          "Scratch": 189,
+          "Near-full": 21,
+          "None": 0
+        },
+        "defect_to_none_count": 658,
+        "true_defect_count": 3753,
+        "defect_to_none_rate": 0.1753264055422329,
+        "confusion_matrix": [
+          [
+            439,
+            5,
+            1,
+            0,
+            40,
+            1,
+            2,
+            0,
+            95
+          ],
+          [
+            7,
+            62,
+            0,
+            0,
+            25,
+            0,
+            0,
+            0,
+            6
+          ],
+          [
+            6,
+            1,
+            531,
+            22,
+            21,
+            11,
+            2,
+            1,
+            179
+          ],
+          [
+            0,
+            0,
+            20,
+            1373,
+            0,
+            0,
+            1,
+            0,
+            26
+          ],
+          [
+            62,
+            4,
+            34,
+            1,
+            236,
+            1,
+            5,
+            1,
+            192
+          ],
+          [
+            2,
+            1,
+            6,
+            0,
+            4,
+            109,
+            0,
+            2,
+            6
+          ],
+          [
+            3,
+            0,
+            1,
+            0,
+            26,
+            0,
+            5,
+            0,
+            154
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            19,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "target_class": "None",
+        "target_class_id": 8,
+        "target_success_count": 658,
+        "target_success_denominator": 3753,
+        "target_success_rate": 0.1753264055422329,
+        "clean_correct_defect_success_count": 147,
+        "clean_correct_defect_denominator": 2912,
+        "clean_correct_defect_success_rate": 0.05048076923076923,
+        "baseline_clean_defect_to_none_count": 432,
+        "baseline_clean_defect_to_none_rate": 0.11510791366906475,
+        "new_target_success_count": 226
+      },
+      "seconds": 51.40562369991676,
+      "predictions_path": "runs/pgd_seed78/targeted_none/predictions.csv",
+      "metrics_path": "runs/pgd_seed78/targeted_none/metrics.json"
+    },
+    {
+      "method": "pgd",
+      "seed": 79,
+      "condition": "clean",
+      "n": 25485,
+      "scope": "full_test",
+      "metrics": {
+        "n": 25485,
+        "accuracy": 0.9564842063959191,
+        "macro_f1": 0.7414747572547036,
+        "per_class_recall": {
+          "Center": 0.6723842195540308,
+          "Donut": 0.82,
+          "Edge-Loc": 0.7803617571059431,
+          "Edge-Ring": 0.9683098591549296,
+          "Loc": 0.5298507462686567,
+          "Random": 0.8769230769230769,
+          "Scratch": 0.10052910052910052,
+          "Near-full": 0.8571428571428571,
+          "None": 0.988772317320081
+        },
+        "per_class_support": {
+          "Center": 583,
+          "Donut": 100,
+          "Edge-Loc": 774,
+          "Edge-Ring": 1420,
+          "Loc": 536,
+          "Random": 130,
+          "Scratch": 189,
+          "Near-full": 21,
+          "None": 21732
+        },
+        "defect_to_none_count": 503,
+        "true_defect_count": 3753,
+        "defect_to_none_rate": 0.13402611244337864,
+        "confusion_matrix": [
+          [
+            392,
+            15,
+            5,
+            0,
+            78,
+            6,
+            1,
+            0,
+            86
+          ],
+          [
+            1,
+            82,
+            0,
+            0,
+            8,
+            1,
+            4,
+            0,
+            4
+          ],
+          [
+            4,
+            1,
+            604,
+            12,
+            23,
+            4,
+            1,
+            0,
+            125
+          ],
+          [
+            0,
+            0,
+            35,
+            1375,
+            4,
+            0,
+            0,
+            0,
+            6
+          ],
+          [
+            12,
+            16,
+            55,
+            2,
+            284,
+            2,
+            17,
+            0,
+            148
+          ],
+          [
+            0,
+            2,
+            5,
+            0,
+            5,
+            114,
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            0,
+            7,
+            0,
+            29,
+            0,
+            19,
+            0,
+            133
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            2,
+            0,
+            18,
+            0
+          ],
+          [
+            5,
+            1,
+            132,
+            37,
+            42,
+            12,
+            15,
+            0,
+            21488
+          ]
+        ]
+      },
+      "seconds": 3.53983439996955,
+      "predictions_path": "runs/pgd_seed79/clean/predictions.csv",
+      "metrics_path": "runs/pgd_seed79/clean/metrics.json"
+    },
+    {
+      "method": "pgd",
+      "seed": 79,
+      "condition": "fgsm8",
+      "n": 25485,
+      "scope": "full_test",
+      "metrics": {
+        "n": 25485,
+        "accuracy": 0.9294486953109672,
+        "macro_f1": 0.6467788332985065,
+        "per_class_recall": {
+          "Center": 0.5951972555746141,
+          "Donut": 0.67,
+          "Edge-Loc": 0.6537467700258398,
+          "Edge-Ring": 0.926056338028169,
+          "Loc": 0.3414179104477612,
+          "Random": 0.8076923076923077,
+          "Scratch": 0.037037037037037035,
+          "Near-full": 0.8571428571428571,
+          "None": 0.9727130498803608
+        },
+        "per_class_support": {
+          "Center": 583,
+          "Donut": 100,
+          "Edge-Loc": 774,
+          "Edge-Ring": 1420,
+          "Loc": 536,
+          "Random": 130,
+          "Scratch": 189,
+          "Near-full": 21,
+          "None": 21732
+        },
+        "defect_to_none_count": 670,
+        "true_defect_count": 3753,
+        "defect_to_none_rate": 0.1785238475885958,
+        "confusion_matrix": [
+          [
+            347,
+            21,
+            9,
+            0,
+            94,
+            7,
+            1,
+            0,
+            104
+          ],
+          [
+            2,
+            67,
+            0,
+            0,
+            21,
+            1,
+            5,
+            0,
+            4
+          ],
+          [
+            7,
+            2,
+            506,
+            29,
+            32,
+            7,
+            2,
+            0,
+            189
+          ],
+          [
+            0,
+            0,
+            72,
+            1315,
+            8,
+            1,
+            0,
+            0,
+            24
+          ],
+          [
+            25,
+            29,
+            69,
+            2,
+            183,
+            3,
+            22,
+            1,
+            202
+          ],
+          [
+            0,
+            2,
+            12,
+            0,
+            5,
+            105,
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            0,
+            7,
+            0,
+            30,
+            0,
+            7,
+            0,
+            144
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            2,
+            0,
+            18,
+            0
+          ],
+          [
+            12,
+            3,
+            285,
+            72,
+            125,
+            15,
+            81,
+            0,
+            21139
+          ]
+        ]
+      },
+      "seconds": 7.564521899999818,
+      "predictions_path": "runs/pgd_seed79/fgsm8/predictions.csv",
+      "metrics_path": "runs/pgd_seed79/fgsm8/metrics.json"
+    },
+    {
+      "method": "pgd",
+      "seed": 79,
+      "condition": "pgd20",
+      "n": 25485,
+      "scope": "full_test",
+      "metrics": {
+        "n": 25485,
+        "accuracy": 0.9261526388071415,
+        "macro_f1": 0.6319763605694884,
+        "per_class_recall": {
+          "Center": 0.5780445969125214,
+          "Donut": 0.64,
+          "Edge-Loc": 0.6369509043927648,
+          "Edge-Ring": 0.926056338028169,
+          "Loc": 0.32276119402985076,
+          "Random": 0.8,
+          "Scratch": 0.026455026455026454,
+          "Near-full": 0.8095238095238095,
+          "None": 0.9706883857905393
+        },
+        "per_class_support": {
+          "Center": 583,
+          "Donut": 100,
+          "Edge-Loc": 774,
+          "Edge-Ring": 1420,
+          "Loc": 536,
+          "Random": 130,
+          "Scratch": 189,
+          "Near-full": 21,
+          "None": 21732
+        },
+        "defect_to_none_count": 704,
+        "true_defect_count": 3753,
+        "defect_to_none_rate": 0.18758326671995737,
+        "confusion_matrix": [
+          [
+            337,
+            23,
+            12,
+            0,
+            95,
+            7,
+            1,
+            0,
+            108
+          ],
+          [
+            3,
+            64,
+            0,
+            0,
+            21,
+            1,
+            6,
+            0,
+            5
+          ],
+          [
+            6,
+            2,
+            493,
+            30,
+            35,
+            8,
+            3,
+            0,
+            197
+          ],
+          [
+            0,
+            0,
+            70,
+            1315,
+            7,
+            1,
+            0,
+            0,
+            27
+          ],
+          [
+            28,
+            29,
+            68,
+            2,
+            173,
+            3,
+            19,
+            1,
+            213
+          ],
+          [
+            0,
+            2,
+            12,
+            1,
+            5,
+            104,
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            0,
+            4,
+            0,
+            28,
+            0,
+            5,
+            0,
+            151
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            3,
+            0,
+            17,
+            0
+          ],
+          [
+            12,
+            3,
+            301,
+            74,
+            138,
+            16,
+            93,
+            0,
+            21095
+          ]
+        ]
+      },
+      "seconds": 341.4622863998229,
+      "predictions_path": "runs/pgd_seed79/pgd20/predictions.csv",
+      "metrics_path": "runs/pgd_seed79/pgd20/metrics.json"
+    },
+    {
+      "method": "pgd",
+      "seed": 79,
+      "condition": "pgd50",
+      "n": 25485,
+      "scope": "full_test",
+      "metrics": {
+        "n": 25485,
+        "accuracy": 0.9261526388071415,
+        "macro_f1": 0.6319604944768634,
+        "per_class_recall": {
+          "Center": 0.5780445969125214,
+          "Donut": 0.64,
+          "Edge-Loc": 0.6369509043927648,
+          "Edge-Ring": 0.926056338028169,
+          "Loc": 0.32276119402985076,
+          "Random": 0.8,
+          "Scratch": 0.026455026455026454,
+          "Near-full": 0.8095238095238095,
+          "None": 0.9706883857905393
+        },
+        "per_class_support": {
+          "Center": 583,
+          "Donut": 100,
+          "Edge-Loc": 774,
+          "Edge-Ring": 1420,
+          "Loc": 536,
+          "Random": 130,
+          "Scratch": 189,
+          "Near-full": 21,
+          "None": 21732
+        },
+        "defect_to_none_count": 705,
+        "true_defect_count": 3753,
+        "defect_to_none_rate": 0.18784972022382093,
+        "confusion_matrix": [
+          [
+            337,
+            23,
+            12,
+            0,
+            95,
+            7,
+            1,
+            0,
+            108
+          ],
+          [
+            3,
+            64,
+            0,
+            0,
+            21,
+            1,
+            6,
+            0,
+            5
+          ],
+          [
+            6,
+            2,
+            493,
+            30,
+            35,
+            8,
+            2,
+            0,
+            198
+          ],
+          [
+            0,
+            0,
+            70,
+            1315,
+            7,
+            1,
+            0,
+            0,
+            27
+          ],
+          [
+            28,
+            29,
+            68,
+            2,
+            173,
+            3,
+            19,
+            1,
+            213
+          ],
+          [
+            0,
+            2,
+            12,
+            1,
+            5,
+            104,
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            0,
+            4,
+            0,
+            28,
+            0,
+            5,
+            0,
+            151
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            3,
+            0,
+            17,
+            0
+          ],
+          [
+            12,
+            3,
+            301,
+            74,
+            139,
+            16,
+            92,
+            0,
+            21095
+          ]
+        ]
+      },
+      "seconds": 823.4847075000289,
+      "predictions_path": "runs/pgd_seed79/pgd50/predictions.csv",
+      "metrics_path": "runs/pgd_seed79/pgd50/metrics.json"
+    },
+    {
+      "method": "pgd",
+      "seed": 79,
+      "condition": "targeted_none",
+      "n": 3753,
+      "scope": "full_test_defects",
+      "metrics": {
+        "n": 3753,
+        "accuracy": 0.7191580069277911,
+        "macro_f1": 0.627490106502824,
+        "per_class_recall": {
+          "Center": 0.6363636363636364,
+          "Donut": 0.69,
+          "Edge-Loc": 0.6950904392764858,
+          "Edge-Ring": 0.9408450704225352,
+          "Loc": 0.458955223880597,
+          "Random": 0.8692307692307693,
+          "Scratch": 0.042328042328042326,
+          "Near-full": 0.8571428571428571,
+          "None": 0.0
+        },
+        "per_class_support": {
+          "Center": 583,
+          "Donut": 100,
+          "Edge-Loc": 774,
+          "Edge-Ring": 1420,
+          "Loc": 536,
+          "Random": 130,
+          "Scratch": 189,
+          "Near-full": 21,
+          "None": 0
+        },
+        "defect_to_none_count": 753,
+        "true_defect_count": 3753,
+        "defect_to_none_rate": 0.2006394884092726,
+        "confusion_matrix": [
+          [
+            371,
+            12,
+            3,
+            0,
+            77,
+            4,
+            0,
+            0,
+            116
+          ],
+          [
+            0,
+            69,
+            0,
+            0,
+            19,
+            1,
+            4,
+            0,
+            7
+          ],
+          [
+            3,
+            1,
+            538,
+            3,
+            17,
+            3,
+            1,
+            0,
+            208
+          ],
+          [
+            0,
+            0,
+            48,
+            1336,
+            6,
+            0,
+            0,
+            0,
+            30
+          ],
+          [
+            9,
+            6,
+            42,
+            0,
+            246,
+            2,
+            9,
+            0,
+            222
+          ],
+          [
+            0,
+            1,
+            6,
+            0,
+            5,
+            113,
+            0,
+            0,
+            5
+          ],
+          [
+            1,
+            0,
+            1,
+            0,
+            14,
+            0,
+            8,
+            0,
+            165
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            2,
+            0,
+            18,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "target_class": "None",
+        "target_class_id": 8,
+        "target_success_count": 753,
+        "target_success_denominator": 3753,
+        "target_success_rate": 0.2006394884092726,
+        "clean_correct_defect_success_count": 171,
+        "clean_correct_defect_denominator": 2888,
+        "clean_correct_defect_success_rate": 0.05921052631578947,
+        "baseline_clean_defect_to_none_count": 503,
+        "baseline_clean_defect_to_none_rate": 0.13402611244337864,
+        "new_target_success_count": 250
+      },
+      "seconds": 51.2628679999616,
+      "predictions_path": "runs/pgd_seed79/targeted_none/predictions.csv",
+      "metrics_path": "runs/pgd_seed79/targeted_none/metrics.json"
+    }
+  ],
+  "aggregate": [
+    {
+      "method": "clean",
+      "condition": "clean",
+      "n": 25485,
+      "seeds": [
+        77,
+        78,
+        79
+      ],
+      "metrics": {
+        "accuracy": {
+          "mean": 0.9563795696815122,
+          "sd": 0.0023055350173613273
+        },
+        "macro_f1": {
+          "mean": 0.7682692020746336,
+          "sd": 0.009022575149726793
+        },
+        "defect_to_none_rate": {
+          "mean": 0.10391686650679456,
+          "sd": 0.021194362243905432
+        }
+      },
+      "per_class_recall": {
+        "Center": {
+          "mean": 0.7472841623785019,
+          "sd": 0.050573686420802705
+        },
+        "Donut": {
+          "mean": 0.8033333333333332,
+          "sd": 0.056862407030773256
+        },
+        "Edge-Loc": {
+          "mean": 0.7540913006029285,
+          "sd": 0.0705919947964267
+        },
+        "Edge-Ring": {
+          "mean": 0.9713615023474178,
+          "sd": 0.004688963463717877
+        },
+        "Loc": {
+          "mean": 0.5130597014925372,
+          "sd": 0.12049119322736956
+        },
+        "Random": {
+          "mean": 0.8230769230769232,
+          "sd": 0.11331476817427875
+        },
+        "Scratch": {
+          "mean": 0.36860670194003525,
+          "sd": 0.04742267957583334
+        },
+        "Near-full": {
+          "mean": 0.9365079365079364,
+          "sd": 0.027492869961410718
+        },
+        "None": {
+          "mean": 0.9857813362782993,
+          "sd": 0.006854241185851459
+        }
+      }
+    },
+    {
+      "method": "clean",
+      "condition": "fgsm8",
+      "n": 25485,
+      "seeds": [
+        77,
+        78,
+        79
+      ],
+      "metrics": {
+        "accuracy": {
+          "mean": 0.7933948074030476,
+          "sd": 0.06388515285689893
+        },
+        "macro_f1": {
+          "mean": 0.4803954525031677,
+          "sd": 0.022968872826772502
+        },
+        "defect_to_none_rate": {
+          "mean": 0.18189892530420107,
+          "sd": 0.03421654485078006
+        }
+      },
+      "per_class_recall": {
+        "Center": {
+          "mean": 0.4979988564894225,
+          "sd": 0.10881240723035135
+        },
+        "Donut": {
+          "mean": 0.4633333333333334,
+          "sd": 0.10263202878893771
+        },
+        "Edge-Loc": {
+          "mean": 0.46296296296296297,
+          "sd": 0.06847951493643743
+        },
+        "Edge-Ring": {
+          "mean": 0.8964788732394365,
+          "sd": 0.004929577464788726
+        },
+        "Loc": {
+          "mean": 0.1449004975124378,
+          "sd": 0.05164687735570786
+        },
+        "Random": {
+          "mean": 0.5076923076923077,
+          "sd": 0.1312209393017845
+        },
+        "Scratch": {
+          "mean": 0.047619047619047616,
+          "sd": 0.015873015873015872
+        },
+        "Near-full": {
+          "mean": 0.7777777777777778,
+          "sd": 0.07273929674533076
+        },
+        "None": {
+          "mean": 0.8320755874593534,
+          "sd": 0.07590790841777151
+        }
+      }
+    },
+    {
+      "method": "clean",
+      "condition": "pgd20",
+      "n": 25485,
+      "seeds": [
+        77,
+        78,
+        79
+      ],
+      "metrics": {
+        "accuracy": {
+          "mean": 0.7022562291544046,
+          "sd": 0.1170391023805636
+        },
+        "macro_f1": {
+          "mean": 0.42759262837601414,
+          "sd": 0.029760381114893604
+        },
+        "defect_to_none_rate": {
+          "mean": 0.21751487698729907,
+          "sd": 0.032683032261073074
+        }
+      },
+      "per_class_recall": {
+        "Center": {
+          "mean": 0.4225271583762151,
+          "sd": 0.1317222933025107
+        },
+        "Donut": {
+          "mean": 0.39666666666666667,
+          "sd": 0.08386497083606084
+        },
+        "Edge-Loc": {
+          "mean": 0.36649440137812234,
+          "sd": 0.052708322554215904
+        },
+        "Edge-Ring": {
+          "mean": 0.8828638497652582,
+          "sd": 0.007397160214360897
+        },
+        "Loc": {
+          "mean": 0.07462686567164178,
+          "sd": 0.027985074626865673
+        },
+        "Random": {
+          "mean": 0.4743589743589743,
+          "sd": 0.13959648809042255
+        },
+        "Scratch": {
+          "mean": 0.026455026455026454,
+          "sd": 0.023062957373231077
+        },
+        "Near-full": {
+          "mean": 0.7619047619047619,
+          "sd": 0.09523809523809523
+        },
+        "None": {
+          "mean": 0.7339867476532302,
+          "sd": 0.13679585978064948
+        }
+      }
+    },
+    {
+      "method": "clean",
+      "condition": "pgd50",
+      "n": 25485,
+      "seeds": [
+        77,
+        78,
+        79
+      ],
+      "metrics": {
+        "accuracy": {
+          "mean": 0.6969589954875417,
+          "sd": 0.12175171302996003
+        },
+        "macro_f1": {
+          "mean": 0.4255124075799828,
+          "sd": 0.030526414491894457
+        },
+        "defect_to_none_rate": {
+          "mean": 0.21849187316813215,
+          "sd": 0.032359568614517
+        }
+      },
+      "per_class_recall": {
+        "Center": {
+          "mean": 0.4179531160663236,
+          "sd": 0.13270143408475102
+        },
+        "Donut": {
+          "mean": 0.39666666666666667,
+          "sd": 0.08386497083606084
+        },
+        "Edge-Loc": {
+          "mean": 0.36304909560723514,
+          "sd": 0.051339319086060785
+        },
+        "Edge-Ring": {
+          "mean": 0.882394366197183,
+          "sd": 0.007419474473840005
+        },
+        "Loc": {
+          "mean": 0.07276119402985075,
+          "sd": 0.026119402985074622
+        },
+        "Random": {
+          "mean": 0.47179487179487173,
+          "sd": 0.1439784117063226
+        },
+        "Scratch": {
+          "mean": 0.026455026455026454,
+          "sd": 0.023062957373231077
+        },
+        "Near-full": {
+          "mean": 0.7619047619047619,
+          "sd": 0.09523809523809523
+        },
+        "None": {
+          "mean": 0.7281121541198846,
+          "sd": 0.1422345528451518
+        }
+      }
+    },
+    {
+      "method": "clean",
+      "condition": "targeted_none",
+      "n": 3753,
+      "seeds": [
+        77,
+        78,
+        79
+      ],
+      "metrics": {
+        "accuracy": {
+          "mean": 0.6585842437161382,
+          "sd": 0.02362637874857529
+        },
+        "macro_f1": {
+          "mean": 0.5991184686370608,
+          "sd": 0.022874405485302226
+        },
+        "defect_to_none_rate": {
+          "mean": 0.2721378452793321,
+          "sd": 0.01950820605613821
+        },
+        "target_success_rate": {
+          "mean": 0.2721378452793321,
+          "sd": 0.01950820605613821
+        },
+        "clean_correct_defect_success_rate": {
+          "mean": 0.157302061504949,
+          "sd": 0.0016696081585422424
+        },
+        "baseline_clean_defect_to_none_rate": {
+          "mean": 0.10391686650679456,
+          "sd": 0.021194362243905432
+        }
+      },
+      "per_class_recall": {
+        "Center": {
+          "mean": 0.6300743281875357,
+          "sd": 0.04343835314630662
+        },
+        "Donut": {
+          "mean": 0.5800000000000001,
+          "sd": 0.13000000000000003
+        },
+        "Edge-Loc": {
+          "mean": 0.5465116279069767,
+          "sd": 0.06494738360494474
+        },
+        "Edge-Ring": {
+          "mean": 0.9086854460093897,
+          "sd": 0.005470037651516915
+        },
+        "Loc": {
+          "mean": 0.3805970149253732,
+          "sd": 0.08796399428452453
+        },
+        "Random": {
+          "mean": 0.6999999999999998,
+          "sd": 0.08140773264814126
+        },
+        "Scratch": {
+          "mean": 0.10758377425044091,
+          "sd": 0.02202821163456225
+        },
+        "Near-full": {
+          "mean": 0.8412698412698413,
+          "sd": 0.07273929674533082
+        },
+        "None": {
+          "mean": 0.0,
+          "sd": 0.0
+        }
+      }
+    },
+    {
+      "method": "noise",
+      "condition": "clean",
+      "n": 25485,
+      "seeds": [
+        77,
+        78,
+        79
+      ],
+      "metrics": {
+        "accuracy": {
+          "mean": 0.957635210254398,
+          "sd": 0.0008644411296505568
+        },
+        "macro_f1": {
+          "mean": 0.769075427770884,
+          "sd": 0.012489621947903182
+        },
+        "defect_to_none_rate": {
+          "mean": 0.10613731237232436,
+          "sd": 0.01638707101066967
+        }
+      },
+      "per_class_recall": {
+        "Center": {
+          "mean": 0.7472841623785019,
+          "sd": 0.06925795267647065
+        },
+        "Donut": {
+          "mean": 0.77,
+          "sd": 0.09539392014169452
+        },
+        "Edge-Loc": {
+          "mean": 0.7583979328165374,
+          "sd": 0.06030976752963208
+        },
+        "Edge-Ring": {
+          "mean": 0.9760563380281692,
+          "sd": 0.006016904045998254
+        },
+        "Loc": {
+          "mean": 0.4819651741293532,
+          "sd": 0.1403269527636755
+        },
+        "Random": {
+          "mean": 0.8358974358974359,
+          "sd": 0.07743419933611026
+        },
+        "Scratch": {
+          "mean": 0.36860670194003525,
+          "sd": 0.018581399916847863
+        },
+        "Near-full": {
+          "mean": 0.9365079365079364,
+          "sd": 0.07273929674533082
+        },
+        "None": {
+          "mean": 0.9876372783606356,
+          "sd": 0.004966717736536795
+        }
+      }
+    },
+    {
+      "method": "noise",
+      "condition": "fgsm8",
+      "n": 25485,
+      "seeds": [
+        77,
+        78,
+        79
+      ],
+      "metrics": {
+        "accuracy": {
+          "mean": 0.8132627035511085,
+          "sd": 0.056294532597955464
+        },
+        "macro_f1": {
+          "mean": 0.4915462753586059,
+          "sd": 0.014071171668890959
+        },
+        "defect_to_none_rate": {
+          "mean": 0.18198774313882227,
+          "sd": 0.022235700554250004
+        }
+      },
+      "per_class_recall": {
+        "Center": {
+          "mean": 0.5025728987993139,
+          "sd": 0.133625706370925
+        },
+        "Donut": {
+          "mean": 0.4466666666666667,
+          "sd": 0.15502687938977983
+        },
+        "Edge-Loc": {
+          "mean": 0.46382428940568476,
+          "sd": 0.04907860442693173
+        },
+        "Edge-Ring": {
+          "mean": 0.9077464788732393,
+          "sd": 0.005316784813570943
+        },
+        "Loc": {
+          "mean": 0.13805970149253732,
+          "sd": 0.043873044836958384
+        },
+        "Random": {
+          "mean": 0.5153846153846153,
+          "sd": 0.08140773264814122
+        },
+        "Scratch": {
+          "mean": 0.10052910052910052,
+          "sd": 0.023062957373231077
+        },
+        "Near-full": {
+          "mean": 0.8095238095238094,
+          "sd": 0.12598815766974242
+        },
+        "None": {
+          "mean": 0.8541935088042211,
+          "sd": 0.06559277320457545
+        }
+      }
+    },
+    {
+      "method": "noise",
+      "condition": "pgd20",
+      "n": 25485,
+      "seeds": [
+        77,
+        78,
+        79
+      ],
+      "metrics": {
+        "accuracy": {
+          "mean": 0.7303119482048263,
+          "sd": 0.10588995018883016
+        },
+        "macro_f1": {
+          "mean": 0.44459492091221114,
+          "sd": 0.021602643103982362
+        },
+        "defect_to_none_rate": {
+          "mean": 0.21831423749888978,
+          "sd": 0.023393848816175365
+        }
+      },
+      "per_class_recall": {
+        "Center": {
+          "mean": 0.44768439108061747,
+          "sd": 0.13487487912948015
+        },
+        "Donut": {
+          "mean": 0.36999999999999994,
+          "sd": 0.12489995996796795
+        },
+        "Edge-Loc": {
+          "mean": 0.3819982773471146,
+          "sd": 0.04215002836560576
+        },
+        "Edge-Ring": {
+          "mean": 0.8931924882629109,
+          "sd": 0.008008789722644112
+        },
+        "Loc": {
+          "mean": 0.07524875621890546,
+          "sd": 0.012422253952386927
+        },
+        "Random": {
+          "mean": 0.47692307692307695,
+          "sd": 0.08320502943378436
+        },
+        "Scratch": {
+          "mean": 0.05114638447971781,
+          "sd": 0.013315404647743825
+        },
+        "Near-full": {
+          "mean": 0.8095238095238094,
+          "sd": 0.12598815766974242
+        },
+        "None": {
+          "mean": 0.7648168599300571,
+          "sd": 0.12248878070574838
+        }
+      }
+    },
+    {
+      "method": "noise",
+      "condition": "pgd50",
+      "n": 25485,
+      "seeds": [
+        77,
+        78,
+        79
+      ],
+      "metrics": {
+        "accuracy": {
+          "mean": 0.7249623961807599,
+          "sd": 0.11064873593876394
+        },
+        "macro_f1": {
+          "mean": 0.4417899179878977,
+          "sd": 0.02245074129557341
+        },
+        "defect_to_none_rate": {
+          "mean": 0.2191135980104805,
+          "sd": 0.023015989820403957
+        }
+      },
+      "per_class_recall": {
+        "Center": {
+          "mean": 0.44596912521440824,
+          "sd": 0.13487487912948018
+        },
+        "Donut": {
+          "mean": 0.36999999999999994,
+          "sd": 0.12489995996796795
+        },
+        "Edge-Loc": {
+          "mean": 0.3794142980189492,
+          "sd": 0.04301245554573251
+        },
+        "Edge-Ring": {
+          "mean": 0.8924882629107982,
+          "sd": 0.008691788066466475
+        },
+        "Loc": {
+          "mean": 0.07276119402985075,
+          "sd": 0.012234027097578364
+        },
+        "Random": {
+          "mean": 0.47692307692307695,
+          "sd": 0.08320502943378436
+        },
+        "Scratch": {
+          "mean": 0.05114638447971781,
+          "sd": 0.013315404647743825
+        },
+        "Near-full": {
+          "mean": 0.7936507936507936,
+          "sd": 0.11983864182969446
+        },
+        "None": {
+          "mean": 0.75880422111786,
+          "sd": 0.1280481094205369
+        }
+      }
+    },
+    {
+      "method": "noise",
+      "condition": "targeted_none",
+      "n": 3753,
+      "seeds": [
+        77,
+        78,
+        79
+      ],
+      "metrics": {
+        "accuracy": {
+          "mean": 0.6653343991473487,
+          "sd": 0.016680500107529504
+        },
+        "macro_f1": {
+          "mean": 0.5997536156878017,
+          "sd": 0.023840988319043747
+        },
+        "defect_to_none_rate": {
+          "mean": 0.268851585398348,
+          "sd": 0.01273413604620144
+        },
+        "target_success_rate": {
+          "mean": 0.268851585398348,
+          "sd": 0.01273413604620144
+        },
+        "clean_correct_defect_success_rate": {
+          "mean": 0.15055231240611108,
+          "sd": 0.009883856565296617
+        },
+        "baseline_clean_defect_to_none_rate": {
+          "mean": 0.10613731237232436,
+          "sd": 0.01638707101066967
+        }
+      },
+      "per_class_recall": {
+        "Center": {
+          "mean": 0.6420811892510007,
+          "sd": 0.06260916215207668
+        },
+        "Donut": {
+          "mean": 0.59,
+          "sd": 0.14798648586948743
+        },
+        "Edge-Loc": {
+          "mean": 0.5602928509905255,
+          "sd": 0.04476205047745792
+        },
+        "Edge-Ring": {
+          "mean": 0.9161971830985914,
+          "sd": 0.0036592622695117076
+        },
+        "Loc": {
+          "mean": 0.3737562189054726,
+          "sd": 0.08327530094887108
+        },
+        "Random": {
+          "mean": 0.7102564102564103,
+          "sd": 0.031088091417902943
+        },
+        "Scratch": {
+          "mean": 0.10052910052910052,
+          "sd": 0.013998684185526933
+        },
+        "Near-full": {
+          "mean": 0.8253968253968255,
+          "sd": 0.09912695235553011
+        },
+        "None": {
+          "mean": 0.0,
+          "sd": 0.0
+        }
+      }
+    },
+    {
+      "method": "pgd",
+      "condition": "clean",
+      "n": 25485,
+      "seeds": [
+        77,
+        78,
+        79
+      ],
+      "metrics": {
+        "accuracy": {
+          "mean": 0.9562356941992022,
+          "sd": 0.0015648021818547252
+        },
+        "macro_f1": {
+          "mean": 0.7399780783466939,
+          "sd": 0.013715631473751618
+        },
+        "defect_to_none_rate": {
+          "mean": 0.1312727595701217,
+          "sd": 0.014979174548090375
+        }
+      },
+      "per_class_recall": {
+        "Center": {
+          "mean": 0.7307032590051458,
+          "sd": 0.05453898145998163
+        },
+        "Donut": {
+          "mean": 0.8066666666666666,
+          "sd": 0.08082903768654762
+        },
+        "Edge-Loc": {
+          "mean": 0.7450473729543496,
+          "sd": 0.0362064591851571
+        },
+        "Edge-Ring": {
+          "mean": 0.9784037558685447,
+          "sd": 0.009561226222730645
+        },
+        "Loc": {
+          "mean": 0.5012437810945274,
+          "sd": 0.02477435856597274
+        },
+        "Random": {
+          "mean": 0.8487179487179487,
+          "sd": 0.0556475241390018
+        },
+        "Scratch": {
+          "mean": 0.09171075837742504,
+          "sd": 0.04041072041407266
+        },
+        "Near-full": {
+          "mean": 0.9365079365079364,
+          "sd": 0.07273929674533082
+        },
+        "None": {
+          "mean": 0.9884502116694276,
+          "sd": 0.002889440076650033
+        }
+      }
+    },
+    {
+      "method": "pgd",
+      "condition": "fgsm8",
+      "n": 25485,
+      "seeds": [
+        77,
+        78,
+        79
+      ],
+      "metrics": {
+        "accuracy": {
+          "mean": 0.929605650382578,
+          "sd": 0.004671391386741471
+        },
+        "macro_f1": {
+          "mean": 0.6424532371370241,
+          "sd": 0.007660259892393458
+        },
+        "defect_to_none_rate": {
+          "mean": 0.17266187050359713,
+          "sd": 0.01601383341467277
+        }
+      },
+      "per_class_recall": {
+        "Center": {
+          "mean": 0.6638078902229846,
+          "sd": 0.06618792926783786
+        },
+        "Donut": {
+          "mean": 0.6766666666666666,
+          "sd": 0.11015141094572209
+        },
+        "Edge-Loc": {
+          "mean": 0.6102497846683894,
+          "sd": 0.040493794997128345
+        },
+        "Edge-Ring": {
+          "mean": 0.9467136150234742,
+          "sd": 0.018232955144724325
+        },
+        "Loc": {
+          "mean": 0.31156716417910446,
+          "sd": 0.026450460594697443
+        },
+        "Random": {
+          "mean": 0.7589743589743589,
+          "sd": 0.10500305245868348
+        },
+        "Scratch": {
+          "mean": 0.031746031746031744,
+          "sd": 0.01907699087547084
+        },
+        "Near-full": {
+          "mean": 0.873015873015873,
+          "sd": 0.027492869961410784
+        },
+        "None": {
+          "mean": 0.9722835756794895,
+          "sd": 0.007096078378612683
+        }
+      }
+    },
+    {
+      "method": "pgd",
+      "condition": "pgd20",
+      "n": 25485,
+      "seeds": [
+        77,
+        78,
+        79
+      ],
+      "metrics": {
+        "accuracy": {
+          "mean": 0.9251324308416716,
+          "sd": 0.005602768451591581
+        },
+        "macro_f1": {
+          "mean": 0.6274018665283364,
+          "sd": 0.008289640985379492
+        },
+        "defect_to_none_rate": {
+          "mean": 0.18252065014654942,
+          "sd": 0.01747861871574018
+        }
+      },
+      "per_class_recall": {
+        "Center": {
+          "mean": 0.649514008004574,
+          "sd": 0.06878907613216678
+        },
+        "Donut": {
+          "mean": 0.66,
+          "sd": 0.12124355652982141
+        },
+        "Edge-Loc": {
+          "mean": 0.5895779500430663,
+          "sd": 0.04433112569322225
+        },
+        "Edge-Ring": {
+          "mean": 0.9453051643192488,
+          "sd": 0.017037790902933406
+        },
+        "Loc": {
+          "mean": 0.28047263681592044,
+          "sd": 0.03737557015252917
+        },
+        "Random": {
+          "mean": 0.7461538461538462,
+          "sd": 0.10686495376499851
+        },
+        "Scratch": {
+          "mean": 0.02292768959435626,
+          "sd": 0.011014105817281124
+        },
+        "Near-full": {
+          "mean": 0.8571428571428571,
+          "sd": 0.047619047619047616
+        },
+        "None": {
+          "mean": 0.9692619179090741,
+          "sd": 0.008351580914833524
+        }
+      }
+    },
+    {
+      "method": "pgd",
+      "condition": "pgd50",
+      "n": 25485,
+      "seeds": [
+        77,
+        78,
+        79
+      ],
+      "metrics": {
+        "accuracy": {
+          "mean": 0.9250931920737688,
+          "sd": 0.005666300904795188
+        },
+        "macro_f1": {
+          "mean": 0.627330232279616,
+          "sd": 0.008366292014029228
+        },
+        "defect_to_none_rate": {
+          "mean": 0.18260946798117061,
+          "sd": 0.01751784033373308
+        }
+      },
+      "per_class_recall": {
+        "Center": {
+          "mean": 0.649514008004574,
+          "sd": 0.06878907613216678
+        },
+        "Donut": {
+          "mean": 0.66,
+          "sd": 0.12124355652982141
+        },
+        "Edge-Loc": {
+          "mean": 0.5895779500430663,
+          "sd": 0.04433112569322225
+        },
+        "Edge-Ring": {
+          "mean": 0.9450704225352112,
+          "sd": 0.016768846337733297
+        },
+        "Loc": {
+          "mean": 0.28047263681592044,
+          "sd": 0.03737557015252917
+        },
+        "Random": {
+          "mean": 0.7461538461538462,
+          "sd": 0.10686495376499851
+        },
+        "Scratch": {
+          "mean": 0.02292768959435626,
+          "sd": 0.011014105817281124
+        },
+        "Near-full": {
+          "mean": 0.8571428571428571,
+          "sd": 0.047619047619047616
+        },
+        "None": {
+          "mean": 0.9692312411804406,
+          "sd": 0.008401042113092578
+        }
+      }
+    },
+    {
+      "method": "pgd",
+      "condition": "targeted_none",
+      "n": 3753,
+      "seeds": [
+        77,
+        78,
+        79
+      ],
+      "metrics": {
+        "accuracy": {
+          "mean": 0.7254640731858957,
+          "sd": 0.011857430407603939
+        },
+        "macro_f1": {
+          "mean": 0.621451375571205,
+          "sd": 0.0052348431777174236
+        },
+        "defect_to_none_rate": {
+          "mean": 0.19531041833200105,
+          "sd": 0.01792382633503025
+        },
+        "target_success_rate": {
+          "mean": 0.19531041833200105,
+          "sd": 0.01792382633503025
+        },
+        "clean_correct_defect_success_rate": {
+          "mean": 0.05738256025080685,
+          "sd": 0.006193540138464375
+        },
+        "baseline_clean_defect_to_none_rate": {
+          "mean": 0.1312727595701217,
+          "sd": 0.014979174548090375
+        }
+      },
+      "per_class_recall": {
+        "Center": {
+          "mean": 0.7015437392795884,
+          "sd": 0.05951750110771005
+        },
+        "Donut": {
+          "mean": 0.7000000000000001,
+          "sd": 0.08544003745317534
+        },
+        "Edge-Loc": {
+          "mean": 0.6718346253229974,
+          "sd": 0.03276155641629452
+        },
+        "Edge-Ring": {
+          "mean": 0.9549295774647888,
+          "sd": 0.013156015276246092
+        },
+        "Loc": {
+          "mean": 0.4434079601990049,
+          "sd": 0.014249302534066666
+        },
+        "Random": {
+          "mean": 0.7999999999999999,
+          "sd": 0.09452465944188085
+        },
+        "Scratch": {
+          "mean": 0.04056437389770723,
+          "sd": 0.013315404647743825
+        },
+        "Near-full": {
+          "mean": 0.873015873015873,
+          "sd": 0.027492869961410784
+        },
+        "None": {
+          "mean": 0.0,
+          "sd": 0.0
+        }
+      }
+    }
+  ],
+  "statistical_scope": "Mean and sample SD (ddof=1) over complete sets of training seeds 77,78,79 on one fixed lot split",
+  "smoke_warning": null,
+  "export_provenance": "results/export_provenance.json",
+  "exported_at_utc": "2026-11-26T14:12:50.693762+00:00"
+}

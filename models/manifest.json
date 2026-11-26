@@ -1,0 +1,201 @@
+{
+  "schema_version": 1,
+  "export_kind": "metadata_sanitized_original_checkpoints",
+  "exported_at_utc": "2026-11-26T14:09:42.607221+00:00",
+  "retrained": false,
+  "training_settings_unchanged": true,
+  "original_source_files_modified": false,
+  "tensor_hash_algorithm": "SHA-256 over tensors sorted by key; for each tensor, UTF-8 compact sorted-key JSON {name,shape,dtype} and contiguous C-order raw tensor bytes, each prefixed with its unsigned 64-bit little-endian byte length. Tensors are CPU float32 in this export.",
+  "training_code_hash_semantics": "Original training source hashes are retained in checkpoint configs; they do not claim to identify rewritten public source files.",
+  "models": [
+    {
+      "source_checkpoint_id": "clean_seed77",
+      "path": "models/clean_seed77.pt",
+      "method": "clean",
+      "seed": 77,
+      "old_container_sha256": "4379ef446fab4050a8af3b0d925d8c28c8a48a16757b50c20b59d62101ddb500",
+      "new_container_sha256": "2422f9dac8a34989a3da49315c0a1d074c7af48ed58962a10621386f48bbbbad",
+      "tensor_state_sha256": "96b9d278c890c33a43df117bc85349792689ce046319738be14ff4d4b172f211",
+      "tensor_equality_verified": true,
+      "tensor_count": 8,
+      "tensor_keys_shapes_dtypes_equal": true,
+      "source_checkpoint_unchanged": true,
+      "static_pickle_string_scan_passed": true,
+      "metadata_changes": [
+        {
+          "field": "config.data_dir",
+          "before_category": "absolute_private_workspace_path",
+          "after": "data/processed"
+        }
+      ]
+    },
+    {
+      "source_checkpoint_id": "clean_seed78",
+      "path": "models/clean_seed78.pt",
+      "method": "clean",
+      "seed": 78,
+      "old_container_sha256": "1af5c8748b14c1c9fb3c0fc8d02e2630ae323c7d0eac5ddbd3c7827a2a93e807",
+      "new_container_sha256": "cbdc6d19b2ddfd1f4183f4116c00f9866586eff9aaafba0900f632118c1ca664",
+      "tensor_state_sha256": "d7352ba9a230ea759bd311621b7f5cad1421fb1908a3f255c8e432daad74fc09",
+      "tensor_equality_verified": true,
+      "tensor_count": 8,
+      "tensor_keys_shapes_dtypes_equal": true,
+      "source_checkpoint_unchanged": true,
+      "static_pickle_string_scan_passed": true,
+      "metadata_changes": [
+        {
+          "field": "config.data_dir",
+          "before_category": "absolute_private_workspace_path",
+          "after": "data/processed"
+        }
+      ]
+    },
+    {
+      "source_checkpoint_id": "clean_seed79",
+      "path": "models/clean_seed79.pt",
+      "method": "clean",
+      "seed": 79,
+      "old_container_sha256": "86d59d70b5b3466bf4370b84685aec91bfea9ea4d5e509391992ee0c15412abf",
+      "new_container_sha256": "9d52cf558da4b9f4033be735b7f8787cbd27601e32cac659bb7062c9742320bf",
+      "tensor_state_sha256": "c7978891002385edb1076d7983614e42bd00b5da2bbccaefe1fedba72fb24f84",
+      "tensor_equality_verified": true,
+      "tensor_count": 8,
+      "tensor_keys_shapes_dtypes_equal": true,
+      "source_checkpoint_unchanged": true,
+      "static_pickle_string_scan_passed": true,
+      "metadata_changes": [
+        {
+          "field": "config.data_dir",
+          "before_category": "absolute_private_workspace_path",
+          "after": "data/processed"
+        }
+      ]
+    },
+    {
+      "source_checkpoint_id": "noise_seed77",
+      "path": "models/noise_seed77.pt",
+      "method": "noise",
+      "seed": 77,
+      "old_container_sha256": "1c5d65f6b1ba2b353b78a9f3841ecc10007a367f19542f375037fd68069da3d2",
+      "new_container_sha256": "224e0e0df3d87ca8e2d92147326c5b3b46c6d12c4141d89ff6541c95e2c08f43",
+      "tensor_state_sha256": "52ed4a10519bf4bf7a16f50bea4180e23816ea60a2c3b001b56413bc48507bac",
+      "tensor_equality_verified": true,
+      "tensor_count": 8,
+      "tensor_keys_shapes_dtypes_equal": true,
+      "source_checkpoint_unchanged": true,
+      "static_pickle_string_scan_passed": true,
+      "metadata_changes": [
+        {
+          "field": "config.data_dir",
+          "before_category": "absolute_private_workspace_path",
+          "after": "data/processed"
+        }
+      ]
+    },
+    {
+      "source_checkpoint_id": "noise_seed78",
+      "path": "models/noise_seed78.pt",
+      "method": "noise",
+      "seed": 78,
+      "old_container_sha256": "3c462f2c086a0971258be0060d843cf8f7ce4227f441dbcff60ebc76efc203a3",
+      "new_container_sha256": "2e5ea69feb64d9f3107178035beaaa32a704bbb12356cb0a99b471d119aa2a49",
+      "tensor_state_sha256": "84b15eb9c7cc1b5cacbf88ccb3cc3a16cc5d2265ab4c8a62ddd74c94022c937f",
+      "tensor_equality_verified": true,
+      "tensor_count": 8,
+      "tensor_keys_shapes_dtypes_equal": true,
+      "source_checkpoint_unchanged": true,
+      "static_pickle_string_scan_passed": true,
+      "metadata_changes": [
+        {
+          "field": "config.data_dir",
+          "before_category": "absolute_private_workspace_path",
+          "after": "data/processed"
+        }
+      ]
+    },
+    {
+      "source_checkpoint_id": "noise_seed79",
+      "path": "models/noise_seed79.pt",
+      "method": "noise",
+      "seed": 79,
+      "old_container_sha256": "f99a6c8151021b8dbd95de4a60c2f5936309fbc11bb350c8c7369e3f10930253",
+      "new_container_sha256": "1260548dcd4541632a34e7f976882290b29dea8e8e5cd43303df1de34d0d7fa4",
+      "tensor_state_sha256": "f42d6f28b3ec46f5aae8f9d2912dfea4ab69d377a7cfdebc57ffaa5d367905b6",
+      "tensor_equality_verified": true,
+      "tensor_count": 8,
+      "tensor_keys_shapes_dtypes_equal": true,
+      "source_checkpoint_unchanged": true,
+      "static_pickle_string_scan_passed": true,
+      "metadata_changes": [
+        {
+          "field": "config.data_dir",
+          "before_category": "absolute_private_workspace_path",
+          "after": "data/processed"
+        }
+      ]
+    },
+    {
+      "source_checkpoint_id": "pgd_seed77",
+      "path": "models/pgd_seed77.pt",
+      "method": "pgd",
+      "seed": 77,
+      "old_container_sha256": "3972504d0f95c1c023c7e5e356f5a33a85676e4a42669e219eac387ae8b08420",
+      "new_container_sha256": "033ecd1e4af3718da8bf9025b1ae6b080beeecc9620deddac515586e7fe09dec",
+      "tensor_state_sha256": "da6353bac45d829faf5d671bcf9e34a91919295bd96118cde7027006733b459d",
+      "tensor_equality_verified": true,
+      "tensor_count": 8,
+      "tensor_keys_shapes_dtypes_equal": true,
+      "source_checkpoint_unchanged": true,
+      "static_pickle_string_scan_passed": true,
+      "metadata_changes": [
+        {
+          "field": "config.data_dir",
+          "before_category": "absolute_private_workspace_path",
+          "after": "data/processed"
+        }
+      ]
+    },
+    {
+      "source_checkpoint_id": "pgd_seed78",
+      "path": "models/pgd_seed78.pt",
+      "method": "pgd",
+      "seed": 78,
+      "old_container_sha256": "5b039cbe12368c333a77e32c8ce1cc0542aad4be1c1966385eb4bcf56b0ced41",
+      "new_container_sha256": "b93d5279e98ee60e5011a5607aa21241128a2ac16965d0e3be12014606e4d970",
+      "tensor_state_sha256": "0af937784647af8fef9f32dcd3229b9b93a42bf94a6c2e6ee6bd46eebde8554e",
+      "tensor_equality_verified": true,
+      "tensor_count": 8,
+      "tensor_keys_shapes_dtypes_equal": true,
+      "source_checkpoint_unchanged": true,
+      "static_pickle_string_scan_passed": true,
+      "metadata_changes": [
+        {
+          "field": "config.data_dir",
+          "before_category": "absolute_private_workspace_path",
+          "after": "data/processed"
+        }
+      ]
+    },
+    {
+      "source_checkpoint_id": "pgd_seed79",
+      "path": "models/pgd_seed79.pt",
+      "method": "pgd",
+      "seed": 79,
+      "old_container_sha256": "5a8aeddcedcd3c36ae46f48de7160f8148c309efb9148db3323f5acef55ae7f9",
+      "new_container_sha256": "47beb011dde0963079b5aa6945a7e9dfee0678c052fb3daae24d2d66072dc535",
+      "tensor_state_sha256": "5f4798eebf9e19c6942d77573fae50b0c82fba11ef1a8f1eb5deacfcf53cecbf",
+      "tensor_equality_verified": true,
+      "tensor_count": 8,
+      "tensor_keys_shapes_dtypes_equal": true,
+      "source_checkpoint_unchanged": true,
+      "static_pickle_string_scan_passed": true,
+      "metadata_changes": [
+        {
+          "field": "config.data_dir",
+          "before_category": "absolute_private_workspace_path",
+          "after": "data/processed"
+        }
+      ]
+    }
+  ]
+}

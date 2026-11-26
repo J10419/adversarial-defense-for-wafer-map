@@ -1,0 +1,11 @@
+{
+  "source_page": "https://www.kaggle.com/datasets/qingyi/wm811k-wafer-map",
+  "download_url": "https://www.kaggle.com/api/v1/datasets/download/qingyi/wm811k-wafer-map",
+  "downloaded_at_utc": "2026-10-25T22:50:19.358170+00:00",
+  "archive_sha256": "0e4bd4316a110a04e475a88071f5e1c7fe4303b12ee53c851d2cae4d995a93e2",
+  "archive_bytes": 156686283,
+  "pickle_sha256": "1d04fccb3dd3176b276878b926b20fead7e077c5751e4d353ea9741a5e7b5c65",
+  "pickle_bytes": 2095505977,
+  "zip_member": "LSWMD.pkl",
+  "zip_crc_verified": true
+}

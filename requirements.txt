@@ -1,0 +1,9 @@
+# Python 3.12. For CUDA training, install the matching PyTorch CUDA wheel first.
+numpy==1.26.4
+pandas==2.2.3
+scipy==1.15.3
+scikit-learn==1.6.1
+matplotlib==3.10.7
+Pillow==11.3.0
+tqdm==4.67.1
+torch==2.10.0

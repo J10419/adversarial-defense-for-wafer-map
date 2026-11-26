@@ -1,0 +1,9 @@
+{
+  "protocol_sha256": "c42e00a09b5a522e9c43fbbb22f31b4ca5b9f9eceb95aa7ddfa0e549b9f5baf2",
+  "method": "clean",
+  "seed": 79,
+  "condition": "pgd50",
+  "checkpoint_sha256": "9d52cf558da4b9f4033be735b7f8787cbd27601e32cac659bb7062c9742320bf",
+  "selected_indices_sha256": "41d9b3bcac4a852d25e6d8d48b13c4002671c07cf73c61752f92453c555410e8",
+  "n": 25485
+}

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore real wafer-map predictions and model-specific adversarial attacks, entirely offline.">
+  <title>Wafer Map Defense Lab</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="./"><span class="wafer-mark" aria-hidden="true"></span><span>WAFER MAP<span class="brand-sub">DEFENSE LAB</span></span></a>
+      <div class="header-note"><span class="demo-tag">Interactive demo</span><a class="results-link" href="results.html">完整實驗結果</a></div>
+    </header>
+    <main>
+      <section class="intro">
+        <div><p class="eyebrow">ADVERSARIAL ROBUSTNESS EXPLORER</p><h1>微小擾動，如何改變判斷？</h1><p class="lead">選擇一張真實晶圓圖，比較乾淨輸入與攻擊後的分類，觀察不同訓練方法的反應。</p></div>
+        <div class="dataset-stamp"><strong id="sample-count">—</strong><span>真實測試樣本</span><small id="model-count">載入模型資料中</small></div>
+      </section>
+      <div id="load-error" class="error" role="alert" hidden></div>
+      <div id="app" hidden>
+        <section class="controls" aria-label="實驗選項">
+          <label>訓練模型<select id="model-select"></select></label>
+          <label>真實晶圓樣本<select id="sample-select"></select></label>
+          <label>攻擊方法<select id="attack-select"><option value="pgd">PGD20-R5</option><option value="fgsm">FGSM</option><option value="clean">Clean · 無攻擊</option></select></label>
+          <label>擾動上限 ε<select id="epsilon-select"></select></label>
+        </section>
+        <div class="sample-line"><span id="sample-description"></span><div class="sample-nav"><button id="previous" type="button" aria-label="上一張樣本">上一張</button><button id="next" type="button" aria-label="下一張樣本">下一張</button></div></div>
+        <section class="image-grid" aria-label="晶圓攻擊比較">
+          <article class="image-card"><div class="card-heading"><h2>原始輸入</h2><span>Clean</span></div><div class="image-stage"><img id="clean-image" alt="所選晶圓的原始輸入"></div><div class="image-footer"><span>原始離散值 0 / 1 / 2</span><strong id="truth-label"></strong></div></article>
+          <article class="image-card delta-card"><div class="card-heading"><h2>擾動放大</h2><span id="delta-scale"></span></div><div class="image-stage"><img id="delta-image" alt="攻擊擾動的放大色階圖，藍色為負、紅色為正"></div><div class="image-footer delta-legend"><span id="negative-epsilon"></span><span class="color-ramp" aria-hidden="true"></span><span id="positive-epsilon"></span></div></article>
+          <article class="image-card"><div class="card-heading"><h2>模型實際看到的輸入</h2><span id="attack-caption"></span></div><div class="image-stage"><img id="attacked-image" alt="所選模型的攻擊後輸入"></div><div class="image-footer"><span id="linf-label"></span><strong id="changed-label"></strong></div></article>
+        </section>
+        <section class="result-panel" aria-live="polite" aria-atomic="true">
+          <div class="outcome"><span id="outcome-tag" class="outcome-tag"></span><h2 id="outcome-title"></h2><p id="outcome-description"></p><p class="score-note">信心分數是 softmax 模型輸出，沒有做機率校準。</p></div>
+          <div class="prediction"><span>乾淨輸入預測</span><strong id="clean-prediction"></strong><div id="clean-confidence"></div></div>
+          <div class="prediction"><span>目前輸入預測</span><strong id="attack-prediction"></strong><div id="attack-confidence"></div></div>
+        </section>
+        <div class="analysis-grid">
+          <section class="panel"><div class="section-heading"><h2>九類信心分數</h2><div class="chart-legend"><span><i class="clean-swatch"></i>Clean</span><span><i class="attack-swatch"></i>目前輸入</span></div></div><div id="probability-chart" class="probability-chart"></div></section>
+          <section class="panel"><div class="section-heading"><h2>同一樣本，不同模型</h2></div><p class="panel-note">每列都使用針對該模型重新生成的白箱攻擊。不是將同一張攻擊圖轉移給所有模型。</p><div class="comparison-wrap"><table><thead><tr><th scope="col">模型</th><th scope="col">Clean</th><th scope="col">目前輸入</th></tr></thead><tbody id="comparison-body"></tbody></table></div><p class="panel-note small-gap">這個小型樣本集用於解釋個案；請以<a href="results.html">完整實驗結果</a>評估效能。</p></section>
+        </div>
+        <section class="gallery-section"><div class="section-heading"><div><p class="eyebrow">EXPLORE THE PATTERNS</p><h2>瀏覽九類晶圓圖</h2></div><span class="muted">固定抽樣，不依攻擊成敗挑圖</span></div><div id="gallery" class="gallery"></div></section>
+        <section class="notes"><div><h2>如何閱讀這個展示</h2><p>黑色是背景、灰色是通過測試晶粒、白色是失敗晶粒。模型輸入將 0 / 1 / 2 正規化為 0 / 0.5 / 1；攻擊圖維持相同灰階範圍，中央色圖則放大擾動。</p></div><div><h2>攻擊範圍</h2><p>這是固定晶圓區域內的連續數位擾動，不代表真的翻轉晶粒狀態或修改實體晶圓。<strong>None</strong> 代表未標註系統性缺陷圖樣，不代表所有晶粒都良好。</p></div></section>
+        <details class="provenance"><summary>資料來源與重現紀錄</summary><div class="provenance-grid"><div><h3>目前個案</h3><dl id="provenance-details"></dl></div><div><h3>可下載的實測資料</h3><p>展示讀取已保存的真實模型輸出；切換選項不需外部服務，也不會即時重新訓練。PNG 為 8-bit 顯示；原始浮點輸入與完整分數保存在 NPZ。</p><div class="download-links"><a href="dataset.json" download>展示資料 JSON</a><a id="provenance-link" href="#" download>模型與攻擊紀錄</a><a id="arrays-link" href="#" download>原始浮點 NPZ</a></div></div></div></details>
+      </div>
+    </main>
+    <footer><span>Adversarial Defense for Wafer Map</span><span id="build-time">WM-811K · Measured model outputs</span></footer>
+  </div>
+</body>
+</html>

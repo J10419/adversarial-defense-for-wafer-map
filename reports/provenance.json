@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "title": "Adversarial Defense for Wafer Map Defect Classification",
+  "pdf": "project_report.pdf",
+  "pdf_sha256": "01b6399d5d63c6ace8f44611e73684edc44db3124e8d0ad8bbaf7d1595eccf22",
+  "pages": 9,
+  "visual_review": "PASS",
+  "visual_pages_inspected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "full_test_runs_verified": 45,
+  "full_test_results": "results/experiments/summary.json",
+  "full_test_results_sha256": "6a9ee7a9a705873de034f2776beebab56fbbb92d9f010b90efee2d62ff2daf61",
+  "model_manifest": "models/manifest.json",
+  "research_data_unchanged": true,
+  "scope_note": "The report distinguishes earlier class-capped subset evaluation from the full-test extension on the same frozen models. The test partition had been examined in the earlier evaluation.",
+  "illustration_note": "The dashboard screenshot illustrates the interface; detailed numeric values are in the report tables."
+}

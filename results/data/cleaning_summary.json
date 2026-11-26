@@ -1,0 +1,60 @@
+{
+  "status": "complete",
+  "created_at_utc": "2026-10-25T23:05:31.951141+00:00",
+  "input_file": "data/raw/LSWMD.pkl",
+  "input_sha256": "1d04fccb3dd3176b276878b926b20fead7e077c5751e4d353ea9741a5e7b5c65",
+  "total_input_records": 811457,
+  "initial_recognized_labeled": 172950,
+  "initial_class_counts": {
+    "Center": 4294,
+    "Donut": 555,
+    "Edge-Loc": 5189,
+    "Edge-Ring": 9680,
+    "Loc": 3593,
+    "Random": 866,
+    "Scratch": 1193,
+    "Near-full": 149,
+    "None": 147431
+  },
+  "valid_labeled_with_lot_before_deduplication": 172950,
+  "original_hash_conflict_groups": 14,
+  "original_hash_same_label_duplicate_groups": 3236,
+  "after_original_map_cleaning": 169684,
+  "resized_hash_conflict_groups": 0,
+  "resized_hash_same_label_duplicate_groups": 2,
+  "exclusions_by_reason": {
+    "unlabeled": 638507,
+    "raw_same_label_duplicate": 3238,
+    "raw_label_conflict": 28,
+    "resized_same_label_duplicate": 4
+  },
+  "final_retained": 169680,
+  "final_class_counts": {
+    "Center": 4286,
+    "Donut": 555,
+    "Edge-Loc": 5151,
+    "Edge-Ring": 9668,
+    "Loc": 3572,
+    "Random": 852,
+    "Scratch": 1182,
+    "Near-full": 141,
+    "None": 144273
+  },
+  "policies": [
+    "Only recognized labeled maps with a lot and valid 2D values in {0,1,2} are eligible.",
+    "At each identity stage, remove every map in any group with conflicting class labels; no majority voting or guessed correction.",
+    "At each identity stage, retain the lowest original row position from same-label duplicates.",
+    "Original identity includes shape and uint8 pixels. Resized identity is rechecked after deterministic nearest-neighbor 64x64 preprocessing.",
+    "Cleaning precedes group splitting; the original trainTestLabel/trianTestLabel field is not used as the new split.",
+    "Removed maps remain unchanged in the raw archive; exclusions are logged with stage and representative, where applicable."
+  ],
+  "hash_identity_method": "BLAKE2b-128 over little-endian uint32 height,width and C-order uint8 values",
+  "exclusions_csv": "results/data/cleaning_exclusions.csv",
+  "versions": {
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "Pillow": "11.3.0",
+    "scikit_learn": "1.6.1"
+  },
+  "record_origin": "Saved dataset audit; path labels normalized for public distribution."
+}

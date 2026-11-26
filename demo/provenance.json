@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "source_kind": "recorded_real_model_gallery",
+  "predictions_recomputed": false,
+  "numeric_records_equal": true,
+  "sample_metadata_equal": true,
+  "configuration_metadata_equal": true,
+  "all_npz_bytes_equal": true,
+  "all_png_bytes_equal": true,
+  "referenced_file_count": 784,
+  "sample_count": 18,
+  "model_count": 3,
+  "record_count": 378,
+  "dataset_sha256": "a6beb8b103c3107fe3e09b3408b0f24b586b447e98dfa0586c697e14827e412e",
+  "model_manifest_sha256": "01972ac612bf9292db31c088abe3725dc7c1c89194f121dbe92e1f30cd13c35f",
+  "historical_execution_sources": {
+    "gallery_builder": "7134f1a94319d3890f2cf7377076758e3f7b7e45f771ab7ec12c28a51fc41ed7",
+    "classifier_definition": "29b73a162a4e4ec1dc646328b10596a800c5c69e643a29ccdf950ffca596a037",
+    "attack_implementation": "9de7b33a47c7bff107496329e3ea6963f131ac649fe572ff374c5bfbed276b30"
+  }
+}
